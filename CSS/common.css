@@ -1,0 +1,616 @@
+
+body{
+	font-family: "Noto Sans TC", sans-serif;
+	background: #eeeeee;
+	line-height: 1.5;
+}
+
+/* Color */
+
+.black{
+    color: black;
+}
+.white{
+    color: white;
+}
+.orange{
+    color: #EB6100;
+}
+.blue{
+    color: #072C87;
+}
+.Bright{
+    color: #FF5342;   
+}
+
+
+
+.feature,.training{
+    width: 100%;
+	background-color: #072C87;
+}
+
+/* Spacing */
+.CardInner{
+    padding: 80px 40px;
+    background-color: white;
+    margin-top: 64px;
+}
+
+@media (max-width: 1439px) {
+	.container,.Join-container {
+		width: 100%;
+		padding: 0 40px;
+	}
+  }
+  
+@media (max-width: 767px) {
+	.container {
+	  width: 100%;
+	  padding: 0 24px;
+	}
+  }
+
+
+/* header */
+  .navbar{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	align-items: center;
+	background:white ;
+	z-index: 99;
+}
+
+
+.navbar .container{
+	display: flex;
+	height: 80px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo a {
+	color: #fff;
+	font-size: 20px;
+	font-weight: bolder;
+	text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    background-image: url(../IMG/YuantaLogo.svg);
+    width: 165px;
+	background-repeat: no-repeat;
+}
+
+
+/* ContainerBlock */
+
+.wrapper{
+	max-width: 1440px;
+	padding: 120px;
+	margin: 0 auto;
+}
+
+
+.Title{
+    display: inline-block;
+    color: #042190;
+    border-bottom: 3px solid #042190;
+    width: fit-content;
+    margin-bottom: 32px;
+}
+
+.SubTitle{
+    display: inline-block;
+    color: #042190;
+    width: fit-content;
+    margin-bottom: 16px;
+    margin:  0 auto;
+}
+
+.TitleContent{
+    font-size: 24px;
+    text-align: center;
+}
+
+.Item{
+    width: 32px;
+    height: 32px;
+}
+
+.VerLine{
+    width: 1px;
+    height: 100%;
+    background-color: black;
+}
+
+
+
+@media (max-width: 1439px) {
+	.wrapper {
+		max-width: 1200px;
+		padding: 96px 32px;
+	}
+  }
+@media (max-width: 767px) {
+	.wrapper {
+		width: 100%;
+		padding: 56px 24px;
+	}
+    .title{
+        gap: 16px;
+    }
+  }
+
+/* Menu */
+
+/* .showmenu {
+    color: #0053AC;
+    font-size: 40px;
+    text-decoration: none;
+    cursor: pointer;
+	margin-top: -16px;
+} */
+
+/* 黑色遮罩 */
+/* .overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 500;
+    transition: opacity 0.3s ease; 
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+} */
+
+/* 側邊選單 */
+/* .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background-color: #0053AC;
+    z-index: 600;
+    transform: translateX(100%); 
+    transition: transform 0.3s ease; 
+	border-bottom: 8px solid #EB6100;
+} */
+
+/* 開啟時的效果 */
+/* .sidebar.active {
+    transform: translateX(0);
+} */
+
+/* 關閉按鈕 */
+/* .close-btn {
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+	color: #ffffff;
+}
+.side-logo{
+	margin-top: 120px;
+	padding: 0px 40px;
+} */
+
+/* 側邊選單項目 */
+/* .sidebar ul {
+    list-style-type: none;
+    padding: 32px 40px;
+} */
+
+/* .sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+	padding: 16px;
+	position: relative; 
+    display: inline-block;
+	margin-top: 12px;
+}
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px; 
+    background-color: #EB6100; 
+    transform: scaleX(0); 
+    transition: transform 0.3s ease; 
+}
+
+.sidebar a:hover::after {
+    transform: scaleX(1); 
+}
+
+.sidebar a:hover {
+    background-color: #0464CB; 
+}
+
+@media (max-width: 767px) {
+	.sidebar{
+        overflow-y: auto;
+    }
+    .sidebar ul {
+        padding: 24px 24px 80px 24px;
+    }
+    .close-btn{
+        top: 32px;
+        right: 24px;
+        position: fixed;
+    }
+  } */
+
+.HorLine{
+	width: 1px;         
+    height: auto;         
+    background-color: #B8BFCA;
+    flex-shrink: 0;
+}
+
+
+/*-------- 卡片樣式 ---------- */
+
+.StyleElement{
+    position: relative;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 60px) 0, /* 右上角導角 */
+        100% 60px, 
+        100% calc(100% - 70px), /* 右下角導角 */
+        calc(100% - 70px) 100%, 
+        60px 100%, /* 左下角導角 */
+        0 calc(100% - 60px)
+    );
+    box-sizing: border-box;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0, 0.25));
+}
+
+.StyleElement::before,
+.StyleElement::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+}
+/* 右線段 */
+.StyleElement::before {
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffff00 10%, #ffffff 70%); /* 右側漸層 */
+}
+
+/* 左線段 */
+.StyleElement::after {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; 
+    background: linear-gradient(to right, #ffffff00 10%, #ffffff 60%); /* 底部漸層 */
+}
+
+
+.CardStyle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F8F8F8;
+    padding: 80px;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 60px) 0, /* 右上角導角 */
+        100% 60px, 
+        100% calc(100% - 60px), /* 右下角導角 */
+        calc(100% - 60px) 100%, 
+        60px 100%, /* 左下角導角 */
+        0 calc(100% - 60px)
+    );
+}
+
+.CardElement{
+    position: absolute;
+    width: 74px;
+    height: 74px;
+    bottom: 0;
+    right: 0;
+}
+
+/* 浮動按鈕 */
+.float-btn{
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	position: fixed;
+	bottom: 20px;
+	right: 32px;
+    z-index: 100;
+}
+
+.float-btn img{
+	width: 32px;
+	color: white;
+}
+
+.edit, .submit{
+	background-color: #0053AC;
+	width: 96px;
+	height: 96px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	color: white;
+	font-size: 18px;
+    border: 1px solid white;
+}
+.submit{
+	background-color: #EB6100;
+}
+
+@media (max-width: 767px) {
+    .float-btn{
+        flex-direction: row;
+        gap: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+    }
+    .float-btn img{
+        width: 28px;
+    }
+    .edit,.submit{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 16px 24px;
+    }
+}
+/* --------------------GoToTop------------------- */
+.back-to-top {
+    position: fixed; /* 固定位置 */
+    bottom: 250px;    /* 距離底部 20px */
+    right: 54px;     /* 距離右側 20px */
+    background-color: #232323c6; /* 背景顏色 */
+    color: white;    /* 文字顏色 */
+    border: none;    /* 取消邊框 */
+    border-radius: 100%; /* 圓形按鈕 */
+    width: 48px;     /* 寬度 */
+    height: 48px;    /* 高度 */
+    display: flex;   /* 讓按鈕內的內容居中 */
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+    transition: background-color 0.3s; /* 背景顏色過渡效果 */
+    opacity: 0; /* 初始隱藏 */
+    visibility: hidden; /* 初始隱藏 */
+    z-index: 100; /* 確保在最上層 */
+}
+
+.back-to-top.show {
+    opacity: 1; /* 滾動到一定距離後顯示 */
+    visibility: visible; /* 滾動到一定距離後顯示 */
+}
+
+.back-to-top:hover {
+    background-color: black; /* 滑鼠懸停時改變背景顏色 */
+}
+
+@media (max-width: 767px) {
+    .back-to-top {
+        bottom: 80px; 
+        right: 16px; 
+    }
+}
+
+/* ------------	tabs/MA+ITMT --------------*/
+.tabs {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.TabsPrimary {
+	text-align: center;
+	width: 50%;
+	font-size: 24px;
+	font-weight: 600;
+	color: #737373;
+    background-color: #D9D9D9;
+	padding: 16px 10px;
+	cursor: pointer;
+	position: relative;
+	position: sticky;
+	top: 79px;
+    z-index: 100;
+}
+
+.TabsPrimary::after {
+	content: "";
+	position: absolute;
+	top: 0;
+    right: 0;
+    background-image: url(../IMG/BG_Elemnet/TabElement.png);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    display: none;
+}
+
+.TabMA{
+    background-color: #072C87;
+}
+
+.tabs__radio {
+	display: none;
+}
+
+.tabs__content {
+	order: 1;
+	width: 100%;
+	line-height: 1.5;
+	display: none;
+}
+
+.tabs__radio:checked + .TabsPrimary {
+	color: white;
+    background-color: #072C87;
+}
+
+.tabs__radio:checked + .TabsPrimary::after {
+	width: 100%;
+    display: block;
+}
+
+.tabs__radio:checked + .TabsPrimary + .tabs__content {
+	display: initial;
+}
+
+
+
+
+
+
+
+/* ------------	tabs/MA --------------*/
+
+
+  .tabs__radio{
+	position: fixed;
+  }
+
+  .tabs__label {
+	text-align: center;
+	width: 25%;
+	font-size: 24px;
+	font-weight: 600;
+	color: #737373;
+	background-color: white;
+	padding: 16px 10px;
+	cursor: pointer;
+	position: relative;
+	transition: color 0.3s ease;
+	position: sticky;
+	top: 159px;
+  }
+
+  .tabs__radio {
+	display: none;
+  }
+  
+  .tabs__content {
+	order: 1;
+	width: 100%;
+	line-height: 1.5;
+	display: none;
+  }
+
+
+  .tabs__radio:checked + .tabs__label {
+	color: #0053AC;
+  }
+
+  .tabs__radio:checked + .tabs__label::after {
+    width: 100%;
+  }
+  
+  .tabs__radio:checked + .tabs__label + .tabs__content {
+	display: initial;
+  }
+
+/* -------------tab hover----------- */
+   .tabs__label:hover::after {
+    width: 100%;
+  }
+
+
+/* ------popup------ */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #F8F8F8;
+    width: 90%;
+    max-width: 600px;
+    max-height: 66%;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 40px) 0,
+        100% 40px, 
+        100% 100%, 
+        0 100%, 
+        0 0
+    );
+}
+
+.ContentBg{
+    position: relative;
+    background-color: white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.PopImgAdditional{
+    width: 160px;
+    height: 160px;
+    margin-bottom: 4px;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+#popup-subtitle{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+
+
