@@ -1,8 +1,8 @@
 
 body{
 	font-family: "Noto Sans TC", sans-serif;
-	background: #eeeeee;
-	line-height: 1.5;
+	background-color: #072C87;
+	line-height: 1.7;
 }
 
 /* Color */
@@ -24,10 +24,9 @@ body{
 }
 
 
-
-.feature,.training{
+.body{
     width: 100%;
-	background-color: #072C87;
+	
 }
 
 /* Spacing */
@@ -36,11 +35,17 @@ body{
     background-color: white;
     margin-top: 64px;
 }
+.container{
+	display: flex;
+	height: 80px;
+	justify-content: space-between;
+	align-items: center;
+    padding: 0 32px
+}
 
 @media (max-width: 1439px) {
 	.container,.Join-container {
 		width: 100%;
-		padding: 0 40px;
 	}
   }
   
@@ -48,7 +53,13 @@ body{
 	.container {
 	  width: 100%;
 	  padding: 0 24px;
+      height: 56px;
 	}
+
+    .CardInner{
+        width: 100%;
+        padding: 24px 16px;
+    }
   }
 
 
@@ -63,12 +74,7 @@ body{
 }
 
 
-.navbar .container{
-	display: flex;
-	height: 80px;
-	justify-content: space-between;
-	align-items: center;
-}
+
 
 .logo a {
 	color: #fff;
@@ -93,13 +99,19 @@ body{
 }
 
 
-.Title{
+.Title,.Title-White{
     display: inline-block;
     color: #042190;
     border-bottom: 3px solid #042190;
     width: fit-content;
     margin-bottom: 32px;
 }
+
+.Title-White{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
 
 .SubTitle{
     display: inline-block;
@@ -110,7 +122,7 @@ body{
 }
 
 .TitleContent{
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -119,11 +131,6 @@ body{
     height: 32px;
 }
 
-.VerLine{
-    width: 1px;
-    height: 100%;
-    background-color: black;
-}
 
 
 
@@ -138,9 +145,20 @@ body{
 		width: 100%;
 		padding: 56px 24px;
 	}
-    .title{
-        gap: 16px;
+
+    .TitleContent,.train-word,.point p,.card-block,.CarrerBlock p{
+        text-align: left;
     }
+    
+    .TitleContent br,.train-word br,.slogan-wrapper br{
+        display: none;
+    }
+
+    .Item{
+        width: 24px;
+        height: 24px;
+    }
+    
   }
 
 /* Menu */
@@ -383,6 +401,37 @@ body{
         flex-direction: row;
         padding: 16px 24px;
     }
+
+    .StyleElement{
+        clip-path: polygon(
+        0 0, 
+        calc(100% - 40px) 0, /* 右上角導角 */
+        100% 40px, 
+        100% calc(100% - 40px), /* 右下角導角 */
+        calc(100% - 40px) 100%, 
+        40px 100%, /* 左下角導角 */
+        0 calc(100% - 40px)
+    );
+    }
+
+    .CardStyle{
+        padding: 16px;
+        clip-path: polygon(
+        0 0, 
+        calc(100% - 40px) 0, /* 右上角導角 */
+        100% 40px, 
+        100% calc(100% - 40px), /* 右下角導角 */
+        calc(100% - 40px) 100%, 
+        40px 100%, /* 左下角導角 */
+        0 calc(100% - 40px)
+    );
+    }
+
+    .CardElement{
+        width: 44px;
+        height: 44px;
+    }
+    
 }
 /* --------------------GoToTop------------------- */
 .back-to-top {
@@ -427,7 +476,7 @@ body{
 	width: 100%;
 }
 
-.TabsPrimary {
+/* .TabsPrimary {
 	text-align: center;
 	width: 50%;
 	font-size: 24px;
@@ -483,7 +532,7 @@ body{
 
 .tabs__radio:checked + .TabsPrimary + .tabs__content {
 	display: initial;
-}
+}  */
 
 
 
@@ -510,7 +559,7 @@ body{
 	position: relative;
 	transition: color 0.3s ease;
 	position: sticky;
-	top: 159px;
+	top: 79px;
   }
 
   .tabs__radio {
@@ -542,6 +591,26 @@ body{
     width: 100%;
   }
 
+@media (max-width: 767px) {
+    .tabs__label{
+		font-size: 20px;
+        width: 50%;
+	}
+
+    .tabs{
+		margin-bottom: 48px;
+	}
+
+    .tabs__label{
+		padding: 16px 2px;
+	}
+    
+    .tabs__label {
+        top: 56px;
+        position:static ;
+    }
+}
+
 
 /* ------popup------ */
 .popup {
@@ -565,13 +634,12 @@ body{
     width: 90%;
     max-width: 600px;
     max-height: 66%;
-    padding: 40px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding:24px;
     overflow-y: auto;
     clip-path: polygon(
         0 0, 
-        calc(100% - 40px) 0,
-        100% 40px, 
+        calc(100% - 24px) 0,
+        100% 24px, 
         100% 100%, 
         0 100%, 
         0 0
