@@ -277,7 +277,7 @@ img{
 .FeatureTitle{
 	display: flex;
 	align-items: center;
-	gap: 12px;
+	gap: 8px;
 }
 
 .FeatureTitle h2{
@@ -346,11 +346,37 @@ img{
 	margin-top: 36px;
 }
 
-@media (max-width: 767px) {
+@media (max-width:1439px){
+	.card-block{
+		gap: 24px;
+	}
+	.FeatureTitle h2{
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	.FeatureCard{
+		gap: 8px;
+	}
+
 	.card-block{
 		flex-direction: column;
+	}
+}
+
+@media (max-width: 767px) {
+
+	
+	.FeatureCard p{
+		padding-left: 32px;
+	}
+
+	.card-block{
 		text-align: center;
 	}
+	
 	.feature-block{
 		padding: 40px;
 	}
@@ -435,7 +461,25 @@ img{
 	background-color: #FFE8D2;
 }
 
+@media (max-width: 1439px) {
+	.train-card h3{
+		font-size:20px ;
+	}
+}
 
+@media (max-width: 1023px) {
+
+	.StepBlock{
+		flex-direction: column;
+		padding: 0;
+	}
+
+	.train-mentor{
+		width: 100%;
+		flex-direction: column;
+		gap: 16px;
+	}
+}
 
 @media (max-width: 767px) {
 	.train-block{
@@ -445,10 +489,7 @@ img{
 	.train-card{
 		padding: 16px 12px;
 	}
-	.train-mentor{
-		flex-direction: column;
-		gap: 24px;
-	}
+	
 	.train-line{
 		flex-direction: column;
 		gap: 24px;
@@ -464,13 +505,10 @@ img{
 		height: 2px;
 	}
 
-	.StepBlock{
-		flex-direction: column;
-		padding: 0;
-	}
+	
 
 	.Step1,.Step2{
-		padding: 24px;
+		padding: 24px 16px;
 	}
 
 	
@@ -694,6 +732,7 @@ img{
 }
 
 .card-content{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -705,6 +744,7 @@ img{
 }
 
 .card-title{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -776,6 +816,25 @@ img{
 	width: 100%;
 }
 
+@media (max-width: 1023px) {
+	.ma-grid{
+		grid-gap:32px;
+		grid-template-columns:1fr;
+	}
+
+	.ma-card{
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	.ma-pic{
+		margin: 0;
+	}
+
+	.card-title{
+		gap: 12px;
+	}
+}
 
 @media (max-width: 767px) {
 	
@@ -789,10 +848,7 @@ img{
 	.chip{
 		font-size: 14px;
 	}
-	.ma-grid{
-		grid-gap:16px;
-		grid-template-columns:1fr;
-	}
+	
 	.ma-life{
 		flex-direction: column;
 		gap: 12px;
@@ -809,6 +865,7 @@ img{
 		margin-top: 8px;
 	}
 	.ma-pic{
+		margin: 0 auto;
 		width: 160px;
 		height: 160px;
 	}
@@ -816,6 +873,7 @@ img{
 	.card-title{
 		gap: 12px;
 	}
+ 
 
 	.card-content p{
 		font-size: 16px;
@@ -1008,12 +1066,12 @@ img{
 	}
 
 	.apply-list{
-		gap: 24px;
+		gap: 0;
 		margin-top: 32px;
 	}
 
 	.apply-date,.date-line{
-		padding-left: 40px;
+		padding-left: 32px;
 	}
 
 	.apply-title{
@@ -1066,10 +1124,11 @@ img{
 	align-items: center;
 	margin-top: 80px;
 	background-color: white;
-	padding: 80px;
+	padding: 80px 40px;
 }
 
 .event{
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	gap: 40px;
@@ -1116,7 +1175,7 @@ img{
 	display: flex;
 	align-items: center;
 	color: #042190;
-	gap: 16px;
+	gap: 12px;
 }
 
 .local-item{
@@ -1135,6 +1194,30 @@ img{
 	flex-direction: column;
 	gap: 40px;
 }
+
+.section,.right-section{
+	width: 50%;
+}
+
+@media (max-width:1439px){
+	.time-item{
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+
+	.time-item p,.local-item,.event-btn{
+		margin-left: 44px;
+	}
+
+}
+@media (max-width: 1023px) {
+	.section,.right-section{
+		width: 80%;
+	}
+}
+
+
 @media (max-width: 767px) {
 
 	.activity-block{
@@ -1159,7 +1242,6 @@ img{
 		rotate: 180deg;
 	}
 	.event-btn{
-		width: 100%;
 		text-align: center;
 	}
 	.event{
@@ -1182,8 +1264,16 @@ img{
 		gap: 24px;
 	}
 
+	.section,.right-section{
+		width: 100%;
+	}
+
 	.apply-time{
 		gap: 4px;
+	}
+
+	.time-item p,.local-item,.event-btn{
+		margin-left: 28px;
 	}
 }
 /* --------------slogan-------------2 */

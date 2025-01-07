@@ -31,6 +31,7 @@ body{
 
 /* Spacing */
 .CardInner{
+    width: 100%;
     padding: 80px 40px;
     background-color: white;
     margin-top: 64px;
@@ -44,6 +45,12 @@ body{
 }
 
 @media (max-width: 1439px) {
+
+    .CardInner{
+        padding: 56px 32px ;
+    }
+
+
 	.container,.Join-container {
 		width: 100%;
 	}
@@ -400,6 +407,7 @@ body{
         height: auto;
         flex-direction: row;
         padding: 16px 24px;
+        border: none;
     }
 
     .StyleElement{
