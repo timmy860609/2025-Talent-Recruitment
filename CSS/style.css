@@ -635,6 +635,7 @@ img{
 .chart{
 	width: 100%;
 	display: flex;
+	justify-content: space-between;
 	align-items: flex-end;
 	gap: 24px;
 	margin: 64px 0px 64px 0px;
@@ -719,7 +720,7 @@ img{
 	}
 
 	.chart{
-		gap: 4px;
+		gap: 2px;
 		margin: 24px 0px 24px 0px;
 	}
 	.chart-block{
@@ -742,9 +743,7 @@ img{
 		padding: 2px;
 	}
 
-	.chart-line-blue p,.body1{
-		white-space: nowrap;
-	}
+	
 
 	.chart-line-blue .body1,.chart-line-green .body1,.chart-line-purple .body1,.chart-line-orange .body1{
 		font-size: 10px;
@@ -769,6 +768,15 @@ img{
 	.carrer-item-orange{
 		padding: 88px 2px 16px 2px;
 	}
+
+	.carrer-item-orange .body1{
+		text-align: center;
+	}
+
+	.carrer-item-orange .body1 br{
+		display: none;
+	}
+
 	.chart-line-orange{
 		padding: 2px;
 	}
