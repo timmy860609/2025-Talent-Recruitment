@@ -96,12 +96,15 @@ img{
 		padding-bottom: 56.25%;
 		background-size: cover; /* 等比例缩放，图片完整显示 */
         background-position: center; /* 保持图片居中 */
-		
     }
 
 @media (max-width: 767px) {
 	.KV{
 		margin-top: 56px;
+	}
+
+	.kv-img{
+		background-image: url(../IMG/Banner/KV_360.png);
 	}
 }
 }
@@ -110,7 +113,7 @@ img{
 .BgSpace {
     width: 100%;
     padding: 24px;
-    height: clamp(600px, 20vw, 870px);
+    height: calc(400px + 5vw);
     background-color: #ECECED;
     position: relative;
 }
@@ -123,8 +126,9 @@ img{
     width: 100%;
     height: 100%;
     background-image: url(../IMG/BG_Elemnet/JoinUs_BG.png); /* 背景图片 */
-    background-size: cover;
+    background-size: contain;
     background-position: center bottom;
+	background-repeat: no-repeat;
     z-index: 0; 
 }
 
@@ -134,7 +138,7 @@ img{
 	margin: 0 auto;
     height: auto;
     position: absolute;
-    top: 720px;
+    top: 620px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
@@ -177,16 +181,17 @@ img{
 	flex-direction: column;
 	align-items: center;
 	gap: 40px;
-	padding: 40px 32px;
+	padding: 40px 24px;
 	background-color: #F8F8F8;
 	margin-top: 40px;
 }
 
 .Join-News{
-	display: flex;
-	gap: 24px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	justify-content: space-around;
 	height: auto;
+	gap: 12px;
 }
 
 .News{
@@ -195,6 +200,12 @@ img{
 	flex-direction: column;
 	gap: 4px;
 	color: black;
+	padding-right:12px;
+	border-right: #B8BFCA 1px solid;
+}
+
+.News:nth-child(4n) {
+	border-right: none;
 }
 
 
@@ -203,30 +214,80 @@ img{
 	color: #737373;
 }
 
+@media (min-width: 1920px) {
+	.Join-container{
+		top:calc(500px + 8vw)
+	}
+	.BgSpace{
+		height: calc(300px + 10vw);
+	}
+}
 
 @media (max-width: 1439px) {
 	
 	.BgSpace{
-		height: min(60vw, 520px);
+		height: calc(600px - 10vw); 
+		min-height: 400px; 
+		max-height: 540px; 
 	}
 	
 	.Join-container{
-		top: 48vw;
+		top: 42vw;
 		padding: 0 32px;
+	
+	}
+
+	.Join-Content{
+		gap: 24px;
 	}
 }
 
 @media (max-width: 1023px) {
 	
 	.BgSpace{
-		height: clamp(700px, 10vw, 1200px);
+		height: calc(900px - 8vw);
+		min-height: 700px; 
+		max-height: 900px; 
 	}
+
+	.Join-News{
+		width: 100%;
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.AboutUs{
+		width: 100%;
+		align-items: center;
+		gap: 16px;
+		flex-direction: column;
+	}
+
+	.News{
+		padding-bottom: 16px;
+		border-right: none;
+		border-bottom: 1px solid #B8BFCA;
+		padding-right: 0;
+	}
+
+	.News:nth-child(4n) {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	
 }
 
 @media (max-width: 767px) {
 
 	.BgSpace{
-		height: calc(800px + 5vw);
+		height: calc(1070px - (100vw - 360px) * (390 / 407));
+		min-height: 760px;
+		max-height: 1070px;
+	}
+
+	.Join-Logo{
+		width: 160px;
+		height: auto;
 	}
 
 	.Join-Card{
@@ -243,11 +304,11 @@ img{
 
 	.Join-container{
 		padding: 0 24px;
+		top: 50vw;
 	}
 
 	.Join-Content{
 		padding: 24px 16px;
-		gap: 24px;
 	}
 
 	.Hor-Line{
@@ -255,18 +316,16 @@ img{
 		height: 100px;
 	}
 
-	.Join-News,.AboutUs{
-		width: 100%;
-		flex-direction: column;
-	}
-
-	.AboutUs{
-		align-items: center;
+	.Join-News{
 		gap: 16px;
 	}
 
-	.Join-News{
-		gap: 8px;
+	.News{
+		gap: 0;
+	}
+
+	.News span{
+		font-size: 14px;
 	}
 }
 
@@ -316,10 +375,19 @@ img{
     background-color: #B8BFCA;
 }
 .PointBlock{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.point-container{
 	display: flex;
-	gap: 40px;
+	flex-direction: column;
+	justify-content: center;
 	margin-top: 56px;
 }
+
 .point{
 	display: flex;
 	flex-direction: column;
@@ -329,7 +397,13 @@ img{
 .point-number{
 	text-align: center;
 	width: 100%;
+	border-right: 1px solid #B8BFCA;
 }
+
+.point-number:last-child {
+    border-right: none; 
+}
+
 .NumberBlock{
 	display: flex;
 	flex-direction: row;
@@ -343,7 +417,7 @@ img{
 	gap: 10px;
 }
 .number p{
-	margin-top: 36px;
+	margin-top: 27px;
 }
 
 @media (max-width:1439px){
@@ -373,6 +447,10 @@ img{
 		padding-left: 32px;
 	}
 
+	.number p{
+		margin-top: 12px;
+	}
+
 	.card-block{
 		text-align: center;
 	}
@@ -380,17 +458,22 @@ img{
 	.feature-block{
 		padding: 40px;
 	}
+
 	.card-block{
 		gap: 24px;
 	}
+
 	.number-block{
 		flex-wrap: wrap;
 	}
-	.point-number{
-		flex-basis: 50%;
-	}
+
 	.PointBlock{
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 32px;
 		flex-direction: column;
+	}
+	.point-container{
+		margin-top: 32px;
 	}
 }
 /* -------------Training------------- */
@@ -464,6 +547,10 @@ img{
 @media (max-width: 1439px) {
 	.train-card h3{
 		font-size:20px ;
+	}
+
+	.train-word br{
+		display: none;
 	}
 }
 
@@ -817,6 +904,7 @@ img{
 }
 
 @media (max-width: 1023px) {
+
 	.ma-grid{
 		grid-gap:32px;
 		grid-template-columns:1fr;
@@ -833,6 +921,10 @@ img{
 
 	.card-title{
 		gap: 12px;
+	}
+
+	.ma-life{
+		flex-direction: column;
 	}
 }
 
@@ -1033,6 +1125,30 @@ img{
 	align-self: center;
 }
 
+@media (max-width: 1023px) {
+
+	.cta-block,.apply-btn{
+		width: 100%;
+	}
+
+	.cta-block{
+		margin-top: 0;
+		padding-left: 48px;
+	}
+
+	.date-line{
+		flex-direction: column;
+	}
+
+	.goright{
+		width: 13px;
+		height: 19px;
+		rotate: 90deg;
+		margin: 0 auto;
+	}
+}
+
+
 @media (max-width: 767px) {
 
 	.apply-title{
@@ -1061,9 +1177,7 @@ img{
 	}
 
 
-	.date-line{
-		flex-direction: column;
-	}
+	
 
 	.apply-list{
 		gap: 0;
@@ -1093,11 +1207,7 @@ img{
     .date-block{
 		flex-direction: column;
 	}
-	.goright{
-		width: 16px;
-		rotate: 90deg;
-		margin: 0 auto;
-	}
+	
 
 	.cta-block{
 		width: 100%;
@@ -1212,11 +1322,11 @@ img{
 
 }
 @media (max-width: 1023px) {
+
 	.section,.right-section{
 		width: 80%;
 	}
 }
-
 
 @media (max-width: 767px) {
 

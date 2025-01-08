@@ -70,6 +70,7 @@ link, a{
 
 
 @media (max-width: 767px) {
+
     .display1{
         font-size: 28px;
     }
@@ -90,6 +91,10 @@ link, a{
         font-size: 18px;
     }
     .body3{
+        font-size: 16px;
+    }
+
+    p{
         font-size: 16px;
     }
 }

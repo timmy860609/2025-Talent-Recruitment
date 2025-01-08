@@ -123,9 +123,8 @@ body{
 .SubTitle{
     display: inline-block;
     color: #042190;
-    width: fit-content;
+    text-align: center;
     margin-bottom: 16px;
-    margin:  0 auto;
 }
 
 .TitleContent{
@@ -146,6 +145,10 @@ body{
 		max-width: 1200px;
 		padding: 96px 32px;
 	}
+
+    .TitleContent br{
+        display: none;
+    }
   }
 @media (max-width: 767px) {
 	.wrapper {
@@ -153,6 +156,11 @@ body{
 		padding: 56px 24px;
 	}
 
+    .Join-Card{
+        padding: 24px 32px;
+    }
+
+    
     .TitleContent,.train-word,.point p,.card-block,.CarrerBlock p{
         text-align: left;
     }
@@ -164,6 +172,14 @@ body{
     .Item{
         width: 24px;
         height: 24px;
+    }
+
+    .Title{
+        margin-bottom: 24px;
+    }
+
+    .TitleContent{
+        font-size: 18px;
     }
     
   }
@@ -400,7 +416,8 @@ body{
         width: 100%;
     }
     .float-btn img{
-        width: 28px;
+        width: 24px;
+        height: 24px;
     }
     .edit,.submit{
         width: 100%;
@@ -413,31 +430,31 @@ body{
     .StyleElement{
         clip-path: polygon(
         0 0, 
-        calc(100% - 40px) 0, /* 右上角導角 */
-        100% 40px, 
-        100% calc(100% - 40px), /* 右下角導角 */
-        calc(100% - 40px) 100%, 
-        40px 100%, /* 左下角導角 */
-        0 calc(100% - 40px)
+        calc(100% - 24px) 0, /* 右上角導角 */
+        100% 24px, 
+        100% calc(100% - 24px), /* 右下角導角 */
+        calc(100% - 24px) 100%, 
+        24px 100%, /* 左下角導角 */
+        0 calc(100% - 24px)
     );
     }
 
     .CardStyle{
-        padding: 16px;
+        padding: 24px 16px;
         clip-path: polygon(
         0 0, 
-        calc(100% - 40px) 0, /* 右上角導角 */
-        100% 40px, 
-        100% calc(100% - 40px), /* 右下角導角 */
-        calc(100% - 40px) 100%, 
-        40px 100%, /* 左下角導角 */
-        0 calc(100% - 40px)
+        calc(100% - 24px) 0, /* 右上角導角 */
+        100% 24px, 
+        100% calc(100% - 24px), /* 右下角導角 */
+        calc(100% - 24px) 100%, 
+        24px 100%, /* 左下角導角 */
+        0 calc(100% - 24px)
     );
     }
 
     .CardElement{
-        width: 44px;
-        height: 44px;
+        width: 29px;
+        height: 29px;
     }
     
 }
