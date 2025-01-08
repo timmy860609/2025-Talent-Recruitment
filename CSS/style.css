@@ -126,7 +126,7 @@ img{
     width: 100%;
     height: 100%;
     background-image: url(../IMG/BG_Elemnet/JoinUs_BG.png); /* 背景图片 */
-    background-size: contain;
+    background-size: cover;
     background-position: center bottom;
 	background-repeat: no-repeat;
     z-index: 0; 
@@ -223,6 +223,12 @@ img{
 	}
 }
 
+@media (max-width: 1600px) {
+    .BgSpace::after {
+        background-size: contain; /* 屏幕宽度较小，改为contain确保图像不裁剪 */
+    }
+}
+
 @media (max-width: 1439px) {
 	
 	.BgSpace{
@@ -280,9 +286,9 @@ img{
 @media (max-width: 767px) {
 
 	.BgSpace{
-		height: calc(1070px - (100vw - 360px) * (390 / 407));
-		min-height: 760px;
-		max-height: 1070px;
+		height: calc(1068px - (100vw - 360px) * (390 / 407)); /* 根据需求调整公式 */
+		min-height: 760px;   /* 确保最小高度 */
+		max-height: 1070px;  /* 确保最大高度 */
 	}
 
 	.Join-Logo{
@@ -447,21 +453,28 @@ img{
 		padding-left: 32px;
 	}
 
+	.number{
+		gap: 4px;
+	}
+
 	.number p{
-		margin-top: 12px;
+		margin-top: 5px;
+	}
+
+	.number h1{
+		font-size:20px;
 	}
 
 	.card-block{
 		text-align: center;
+		gap: 24px;
+		margin-bottom: 24px;
 	}
 	
 	.feature-block{
 		padding: 40px;
 	}
 
-	.card-block{
-		gap: 24px;
-	}
 
 	.number-block{
 		flex-wrap: wrap;
@@ -469,12 +482,16 @@ img{
 
 	.PointBlock{
 		grid-template-columns: repeat(2, 1fr);
-		margin-bottom: 32px;
-		flex-direction: column;
+		margin-top: 24px;
+		margin-bottom: 0;
 	}
+
+
 	.point-container{
-		margin-top: 32px;
+		margin-top: 24px;
 	}
+
+
 }
 /* -------------Training------------- */
 
@@ -607,6 +624,7 @@ img{
 	width: 72px;
 }
 .CarrerBlock{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -693,46 +711,66 @@ img{
 
 	.CarrerBlock{
 		padding: 24px 16px;
+		margin-top: 40px;
+	}
+
+	.carrer-pic{
+		width: 24px;
 	}
 
 	.chart{
-		gap: 8px;
+		gap: 4px;
+		margin: 24px 0px 24px 0px;
 	}
 	.chart-block{
 		padding: 24px 16px;
 	}
 	.carrer-box{
-		padding: 8px 4px;
+		padding: 8px 2px;
+	}
+
+	.carrer-box h3{
+		font-size: 12px;
+		white-space: nowrap 
 	}
 
 	/* blue */
 	.carrer-item-blue{
-		padding: 16px 20px 16px 20px;
+		padding: 16px 2px 16px 2px;
 	}
 	.chart-line-blue{
-		padding: 6px;
+		padding: 2px;
 	}
+
+	.chart-line-blue p,.body1{
+		white-space: nowrap;
+	}
+
+	.chart-line-blue .body1,.chart-line-green .body1,.chart-line-purple .body1,.chart-line-orange .body1{
+		font-size: 10px;
+	}
+
 
 	/* green */
 	.carrer-item-green{
-		padding: 40px 20px 16px 20px;
+		padding: 40px 2px 16px 2px;
 	}
 	.chart-line-green{
-		padding: 6px;
+		padding: 2px;
 	}
 	/* purple */
 	.carrer-item-purple{
-		padding: 64px 20px 16px 20px;
+		padding: 64px 2px 16px 2px;
 	}
 	.chart-line-purple{
-		padding: 6px;
+		padding: 2px;
 	}
 	/* orange */
 	.carrer-item-orange{
-		padding: 88px 20px 16px 20px;
+		padding: 88px 2px 16px 2px;
 	}
 	.chart-line-orange{
-		padding: 6px;
+		padding: 2px;
 	}
 }
 
