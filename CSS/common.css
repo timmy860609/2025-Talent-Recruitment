@@ -314,7 +314,17 @@ body{
         border: none;
     }
 
-    .StyleElement{
+    .StyleElement::before{
+        width: 2px;
+    }
+
+    .StyleElement::after{
+        height: 2px;
+    }
+
+    .StyleElement{ 
+        padding-right:8px ;
+        padding-bottom:8px ;
         clip-path: polygon(
         0 0, 
         calc(100% - 24px) 0, /* 右上角導角 */
@@ -340,8 +350,8 @@ body{
     }
 
     .CardElement{
-        width: 29px;
-        height: 29px;
+        width: 27px;
+        height: 27px;
     }
     
 }
@@ -464,8 +474,8 @@ body{
 	width: 25%;
 	font-size: 24px;
 	font-weight: 600;
-	color: #737373;
-	background-color: white;
+	color: #838383;
+	background-color: #E5E5E5;
 	padding: 16px 10px;
 	cursor: pointer;
 	position: relative;
@@ -488,6 +498,15 @@ body{
 
   .tabs__radio:checked + .tabs__label {
 	color: #0053AC;
+    background-color: white;
+    clip-path: polygon(
+        0 0, 
+        calc(100% - 20px) 0,
+        100% 20px, 
+        100% 100%, 
+        0 100%, 
+        0 0
+    );
   }
 
   .tabs__radio:checked + .tabs__label::after {
@@ -505,16 +524,13 @@ body{
 
 @media (max-width: 767px) {
     .tabs__label{
-		font-size: 20px;
+		font-size: 18px;
         width: 50%;
+        padding: 12px 12px;
 	}
 
     .tabs{
 		margin-bottom: 48px;
-	}
-
-    .tabs__label{
-		padding: 16px 2px;
 	}
     
     .tabs__label {
