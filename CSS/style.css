@@ -181,7 +181,7 @@ img{
 	flex-direction: column;
 	align-items: center;
 	gap: 40px;
-	padding: 40px 24px;
+	padding: 48px 24px;
 	background-color: #F8F8F8;
 	margin-top: 40px;
 }
@@ -191,7 +191,7 @@ img{
 	grid-template-columns: repeat(4, 1fr);
 	justify-content: space-around;
 	height: auto;
-	gap: 12px;
+	gap: 24px;
 }
 
 .News{
@@ -200,7 +200,7 @@ img{
 	flex-direction: column;
 	gap: 4px;
 	color: black;
-	padding-right:12px;
+	padding-right:24px;
 	border-right: #B8BFCA 1px solid;
 }
 
@@ -213,6 +213,14 @@ img{
 	font-weight: 400;
 	color: #737373;
 }
+
+.News p:hover{
+	color: #1C4EB0;
+}
+
+
+
+
 
 @media (min-width: 1920px) {
 	.Join-container{
@@ -330,6 +338,8 @@ img{
 		gap: 0;
 	}
 
+	
+
 	.News span{
 		font-size: 14px;
 	}
@@ -338,6 +348,16 @@ img{
 
 /* ---------- Feature ----------- */
 
+.Feature{
+	position: relative;
+}
+
+.BlockBg{
+	width: 100%;
+	top: 100%;
+	position: absolute;
+	z-index: -1;
+}
 
 .FeatureTitle{
 	display: flex;
@@ -392,6 +412,10 @@ img{
 	flex-direction: column;
 	justify-content: center;
 	margin-top: 56px;
+}
+
+.point-container p{
+	text-align: center;
 }
 
 .point{
@@ -496,10 +520,11 @@ img{
 /* -------------Training------------- */
 
 .train-block{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 80px;
+	padding: 40px 32px;
 	background-color: white;
 }
 .train-mentor{
@@ -507,7 +532,7 @@ img{
 	flex-direction: row;
 	justify-content: center;
 	gap: 24px;
-	margin-top: 40px;
+	margin-top: 48px;
 }
 .train-card{
 	display: flex;
@@ -528,20 +553,20 @@ img{
 }
 .train-word{
 	text-align: center;
-	margin: 40px 0px 40px 0px;
+	margin: 24px 0px 56px 0px;
 }
 
 .StepBlock{
 	width: 100%;
 	padding: 0 40px;
 	display: flex;
-	gap: 40px;
+	gap: 24px;
 }
 
 .Step1,.Step2{
 	text-align: center;
 	width: 100%;
-	padding: 24px 40px;
+	padding: 40px;
 	background-color: #E4EEFF;
 }
 .Step2{
@@ -628,9 +653,11 @@ img{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 80px;
+	padding: 40px 32px;
 	background-color: white;
 	margin-top: 80px;
+	font-size:24px ;
+	font-weight: 600;
 }
 .chart{
 	width: 100%;
@@ -638,7 +665,7 @@ img{
 	justify-content: space-between;
 	align-items: flex-end;
 	gap: 24px;
-	margin: 64px 0px 64px 0px;
+	margin: 48px 0px 24px 0px;
 }
 .carrer-box{
 	background-color: #ffffff;
@@ -707,6 +734,23 @@ img{
 	text-align: center;
 }
 
+@media (max-width: 1439px) {
+	.chart{
+		gap: 16px;
+	}
+
+	.carrer-item-blue,.carrer-item-green,.carrer-item-purple,.carrer-item-orange{
+		font-size: 18px;
+	}
+
+	.carrer-item-blue{
+		padding: 24px 16px;
+	}
+}
+
+@media (max-width: 1023px) {
+
+}
 
 @media (max-width: 767px) {
 
@@ -784,7 +828,7 @@ img{
 
 /* slogan-1 */
 .slogan-wrapper{
-	padding: 80px;	
+	padding: 40px;	
 }
 .slogan{
 	background-color: #FF8D1E;
@@ -1346,7 +1390,6 @@ img{
 	padding: 12px 24px;
 	background-color: #0053AC;
 	color: white;
-	margin-top: 16px;
 	font-size: 18px;
 	width: fit-content;
 }
@@ -1361,6 +1404,7 @@ img{
 .local-item{
 	display: flex;
 	flex-direction: column;
+	margin-left: 44px;
 }
 .event-line{
 	width: 1px;            
@@ -1435,6 +1479,7 @@ img{
 	.event-btn{
 		text-align: center;
 		padding: 8px 16px;
+		margin-top: 16px;
 	}
 	
 	.reminder{
@@ -1537,11 +1582,21 @@ img{
 .accordion-input:checked + .accordion-label::after {
 	transform: rotate(180deg); /* 可選效果，根據需求旋轉 */
 }
+
+@media (max-width: 1439px) {
+	.accordion-label{
+		padding: 32px 72px 24px 32px;
+	}
+	.accordion-label::after {
+		top: 40px;
+	}
+}
+
 @media (max-width: 767px) {
 	.accordion-label{
 		font-size: 20px;
 		gap: 8px;
-		padding: 16px;
+		padding: 16px 64px 16px 16px;
 		margin-top: 16px;
 	}
 	.accordion-content{
@@ -1549,6 +1604,9 @@ img{
 	}
 	.accordion{
 		margin-top: 32px;
+	}
+	.accordion-label::after {
+		top: 22px;
 	}
 }
 /* ----------yuanta--------- */
@@ -1587,6 +1645,10 @@ img{
 	.company img{
 		width: 80%;
 		margin: 0 auto;
+	}
+
+	.accordion-input:checked + .accordion-label + .accordion-content {
+		max-height: 800px;
 	}
 }
 /* -----------ContactUS------------ */

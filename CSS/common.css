@@ -32,9 +32,9 @@ body{
 /* Spacing */
 .CardInner{
     width: 100%;
-    padding: 80px 40px;
+    padding: 40px 32px;
     background-color: white;
-    margin-top: 64px;
+    margin-top: 48px;
 }
 .container{
 	display: flex;
@@ -112,7 +112,7 @@ body{
     color: #042190;
     border-bottom: 3px solid #042190;
     width: fit-content;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .Title-White{
@@ -129,7 +129,7 @@ body{
 }
 
 .TitleContent{
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -144,7 +144,7 @@ body{
 @media (max-width: 1439px) {
 	.wrapper {
 		width: 100%;
-		padding: 96px 32px;
+		padding: 48px 32px;
 	}
 
     .TitleContent br{
@@ -154,7 +154,7 @@ body{
 @media (max-width: 767px) {
 	.wrapper {
 		width: 100%;
-		padding: 56px 24px;
+		padding: 28px 24px;
 	}
 
     .Join-Card{
@@ -237,7 +237,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #F8F8F8;
-    padding: 80px;
+    padding: 40px 32px;
     clip-path: polygon(
         0 0, 
         calc(100% - 60px) 0, /* 右上角導角 */
@@ -483,6 +483,17 @@ body{
 	position: sticky;
 	top: 79px;
   }
+  .tabs__label::after{
+    content: "";
+    position: absolute;
+    background-image: url(../IMG/BG_Elemnet/TabElement.png);
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+  }
 
   .tabs__radio {
 	display: none;
@@ -499,17 +510,9 @@ body{
   .tabs__radio:checked + .tabs__label {
 	color: #0053AC;
     background-color: white;
-    clip-path: polygon(
-        0 0, 
-        calc(100% - 20px) 0,
-        100% 20px, 
-        100% 100%, 
-        0 100%, 
-        0 0
-    );
   }
 
-  .tabs__radio:checked + .tabs__label::after {
+  .tabs__radio:checked{
     width: 100%;
   }
   
@@ -518,9 +521,6 @@ body{
   }
 
 /* -------------tab hover----------- */
-   .tabs__label:hover::after {
-    width: 100%;
-  }
 
 @media (max-width: 767px) {
     .tabs__label{
