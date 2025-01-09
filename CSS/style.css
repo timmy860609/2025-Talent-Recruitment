@@ -354,7 +354,7 @@ img{
 
 .BlockBg{
 	width: 100%;
-	top: 100%;
+	top: 860px;
 	position: absolute;
 	z-index: -1;
 }
@@ -457,6 +457,9 @@ img{
 	.FeatureTitle h2{
 		font-size: 24px;
 	}
+	.BlockBg{
+		top: 860px;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -467,6 +470,9 @@ img{
 
 	.card-block{
 		flex-direction: column;
+	}
+	.BlockBg{
+		top: 1080px;
 	}
 }
 
@@ -479,6 +485,10 @@ img{
 
 	.number{
 		gap: 4px;
+	}
+
+	.BlockBg{
+		top: 820px;
 	}
 
 	.number p{
