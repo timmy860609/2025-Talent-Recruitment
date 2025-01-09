@@ -237,7 +237,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #F8F8F8;
-    padding: 40px 32px;
+    padding: 48px 40px;
     clip-path: polygon(
         0 0, 
         calc(100% - 60px) 0, /* 右上角導角 */

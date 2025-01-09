@@ -402,7 +402,7 @@ img{
 }
 .PointBlock{
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	justify-content: center;
 	margin-top: 40px;
 }
@@ -484,7 +484,7 @@ img{
 	}
 
 	.number{
-		gap: 4px;
+		gap: 16px;
 	}
 
 	.BlockBg{
@@ -492,11 +492,11 @@ img{
 	}
 
 	.number p{
-		margin-top: 5px;
+		margin-top: 19px;
 	}
 
 	.number h1{
-		font-size:20px;
+		font-size:32px;
 	}
 
 	.card-block{
@@ -510,14 +510,19 @@ img{
 	}
 
 
+	.point-number{
+		border-right: none;
+	}
+
 	.number-block{
 		flex-wrap: wrap;
 	}
 
 	.PointBlock{
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		margin-top: 24px;
 		margin-bottom: 0;
+		gap: 24px;
 	}
 
 
@@ -525,9 +530,31 @@ img{
 		margin-top: 24px;
 	}
 
+	.point-container p{
+		text-align: left;
+	}
+
+
+	.point-number p{
+		text-align: center;
+	}
 
 }
 /* -------------Training------------- */
+
+.training{
+	position: relative;
+}
+
+.TrainBg_1{
+	position: absolute;
+	width: 940px;
+	height: 675px;
+	bottom: 340px;
+	left: 0;
+	z-index: -2;
+}
+
 
 .train-block{
 	width: 100%;
@@ -954,7 +981,7 @@ img{
 .ma-grid{
 	display: grid;
 	grid-template-columns: 1fr 1fr; /* 一列1份，一列2份 */
-    grid-template-rows: auto auto; /* 兩行自動高度 */
+    grid-template-rows: auto auto; 
     grid-gap: 24px;
 }
 
@@ -1101,7 +1128,7 @@ img{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 80px 24px;
+	padding: 40px 32px;
 	background-color: white;
 }
 
@@ -1358,7 +1385,7 @@ img{
 	align-items: center;
 	margin-top: 80px;
 	background-color: white;
-	padding: 80px 40px;
+	padding: 40px 32px;
 }
 
 .event{
@@ -1527,7 +1554,16 @@ img{
 
 .accordion {
 	width: 100%;
-	margin-top: 64px;
+}
+
+.accordion-block{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.accordion > *:first-child {
+    margin-top: 0;
 }
 
 .accordion-input {
@@ -1555,7 +1591,7 @@ img{
 .accordion-label {
 	display: flex;
 	align-items: center;
-	padding: 32px 32px 24px 32px;
+	padding: 32px 32px 24px 56px;
 	background: #F6F7FA;
 	color: black;
 	cursor: pointer;
@@ -1572,6 +1608,12 @@ img{
         0 100%, 
         0 0
     );
+}
+
+.accordion-item{
+	position: absolute;
+	top: 36px;
+	left: 16px;
 }
 
 .accordion-label::after {
@@ -1595,7 +1637,8 @@ img{
 
 @media (max-width: 1439px) {
 	.accordion-label{
-		padding: 32px 72px 24px 32px;
+		padding: 32px 80px 24px 56px;
+		margin-top: 16px;
 	}
 	.accordion-label::after {
 		top: 40px;
@@ -1606,14 +1649,10 @@ img{
 	.accordion-label{
 		font-size: 20px;
 		gap: 8px;
-		padding: 16px 64px 16px 16px;
-		margin-top: 16px;
+		padding: 16px 64px 16px 48px;
 	}
 	.accordion-content{
 		padding: 0 16px;
-	}
-	.accordion{
-		margin-top: 32px;
 	}
 	.accordion-label::after {
 		top: 22px;
@@ -1645,6 +1684,12 @@ img{
 	margin-top: 64px;
 }
 @media (max-width: 767px) {
+	.accordion-item{
+		position: absolute;
+		top: 20px;
+		left: 16px;
+	}
+
 	.yuanta-life{
 		padding: 24px;
 	}
