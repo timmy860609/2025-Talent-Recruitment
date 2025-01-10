@@ -1547,7 +1547,7 @@ img{
 .event-time{
 	display: flex;
 	flex-direction: column;
-	gap: 16px;
+	gap: 8px;
 }
 .event-name h2{
 	margin-bottom: 4px;
