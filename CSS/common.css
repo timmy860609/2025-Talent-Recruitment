@@ -762,8 +762,19 @@ body.no-scroll {
     
 }
 
+.ig_footer{
+    width: 51px;
+    height: 51px;
+}
+
 @media (max-width: 767px) {
     .web{
         margin-bottom: 50.2px;
+    }
+    .about{
+        flex-direction: column;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
     }
 }

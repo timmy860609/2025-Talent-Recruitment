@@ -1234,7 +1234,7 @@ img{
 	background-color: white;
 }
 
-.CenterBg{
+/* .CenterBg{
 	width: 1920px;
 	min-width: 1920px;
 	position: absolute;
@@ -1242,7 +1242,7 @@ img{
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: -2;
-}
+} */
 
 .apply-list{
 	width: 100%;
@@ -1387,21 +1387,21 @@ img{
 }
 
 @media (max-width: 1439px) {
-	.CenterBg{
+	/* .CenterBg{
 		width: 1700px;
 		min-width: 1700px;
 		bottom:-800px;
-	}
+	} */
 }
 
 @media (max-width: 1023px) {
 
 
-	.CenterBg{
+	/* .CenterBg{
 		width: 1000px;
 		min-width: 1000px;
 		bottom:-600px;
-	}
+	} */
 
 	.cta-block,.apply-btn{
 		width: 100%;
@@ -1435,11 +1435,11 @@ img{
 
 @media (max-width: 767px) {
 
-	.CenterBg{
-		width: 650px;
+	/* .CenterBg{
+		width: 100%;
 		min-width: 650px;
 		bottom:-400px;
-	}
+	} */
 
 	.apply-title{
 		gap: 8px;
