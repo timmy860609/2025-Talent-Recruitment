@@ -35,3 +35,24 @@ document.getElementById('popup').addEventListener('click', function(event) {
 
 const popupContent = document.querySelector('.popup-content');
 popupContent.addEventListener('click', (e) => e.stopPropagation());
+
+
+
+
+// 等待 DOM 加載完成後執行
+document.addEventListener('DOMContentLoaded', function() {
+    // 當點擊封面圖片時，隱藏圖片並顯示影片
+    document.getElementById('videoThumbnail').addEventListener('click', function() {
+        // 隱藏封面圖片
+        document.getElementById('videoThumbnail').style.display = 'none';  
+
+        // 顯示影片並開始播放
+        const videoIframe = document.getElementById('videoIframe');
+        videoIframe.src = "https://drive.google.com/file/d/1BT-bW1UJhLUo4QQAl7aWuRJ8COD_d3ZB/preview";  // 設定影片的 URL (直接播放影片)
+        videoIframe.style.display = 'block';  // 顯示影片
+    });
+});
+
+
+
+

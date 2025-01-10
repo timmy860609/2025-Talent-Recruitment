@@ -491,7 +491,7 @@ img{
 	}
 
 	.BlockBg{
-		top: 820px;
+		top: clamp(200px, calc(700px + 80vw), 1000px);
 	}
 
 	.number p{
@@ -549,13 +549,26 @@ img{
 	position: relative;
 }
 
-.BlockBg-2{
+.training-triangle{
 	position: absolute;
-	width: 940px;
-	height: 675px;
-	top: 2000px;
-	left: 0;
-	z-index: -2;
+	width: 25vw;
+	height: 25vw;
+	right: 3%;
+	bottom: 30%;
+	z-index: -1;
+	max-width: 450px;
+	max-height: 450px;
+}
+
+.training-square{
+	position: absolute;
+	width: 30vw;
+	height: 30vw;
+	left: 2%;
+	bottom: 0;
+	z-index: -1;
+	max-width: 380px;
+	max-height: 380px;
 }
 
 
@@ -626,6 +639,7 @@ img{
 	background-color: #FFE8D2;
 }
 
+
 @media (max-width: 1439px) {
 	.train-card h3{
 		font-size:20px ;
@@ -633,6 +647,18 @@ img{
 
 	.train-word br{
 		display: none;
+	}
+
+	.training-triangle{
+		right: -120px;
+		bottom: 30%;
+		z-index: -1;
+	}
+	
+	.training-square{
+		left: -160px;
+		bottom: 5%;
+		z-index: -1;
 	}
 }
 
@@ -674,12 +700,21 @@ img{
 		height: 2px;
 	}
 
-	
-
 	.Step1,.Step2{
 		padding: 24px 16px;
 	}
 
+	.training-triangle{
+		right: -20px;
+		bottom: 420px;
+		z-index: -1;
+	}
+	
+	.training-square{
+		left: -30px;
+		bottom: 40px;
+		z-index: -1;
+	}
 	
 }
 
@@ -919,31 +954,21 @@ img{
 
 }
 
-/* slogan-1 */
-.slogan-wrapper{
-	margin-top: 120px;
-	padding: 40px;	
-}
-.slogan{
-	background-color: #FF8D1E;
-	text-align: center;
-}
 
-@media (max-width: 767px) {
-	.slogan-wrapper{
-		padding: 32px 24px;
-	}
-}
 
 
 /* share */
+
+.share{
+	position: relative;
+}
 
 /* --------------chip------------ */
 .skill{
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
-	margin-bottom: 40px;
+	margin-bottom: 56px;
 }
 .chip-line{
 	display: flex;
@@ -971,7 +996,7 @@ img{
 
 .ShareMA{
     background-color: white;
-    padding: 40px 24px;
+    padding: 56px 24px 40px 24px;
   }
 
 .ma-card{
@@ -1095,6 +1120,13 @@ img{
 	width: 100%;
 }
 
+@media (min-width: 1439px) {
+
+	.skill-text br{
+		display: none;
+	}
+}
+
 @media (max-width: 1023px) {
 
 	.ma-grid{
@@ -1135,7 +1167,6 @@ img{
 	}
 	
 	.ma-life{
-		flex-direction: column;
 		gap: 12px;
 		margin-top: 0;
 	}
@@ -1191,7 +1222,9 @@ img{
 
 /*--------------- apply ---------------*/
 
-
+.apply{
+	position: relative;
+}
 .apply-block{
 	width: 100%;
 	display: flex;
@@ -1199,6 +1232,16 @@ img{
 	align-items: center;
 	padding: 40px 32px;
 	background-color: white;
+}
+
+.CenterBg{
+	width: 1920px;
+	min-width: 1920px;
+	position: absolute;
+	bottom:-1000px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -2;
 }
 
 .apply-list{
@@ -1343,12 +1386,26 @@ img{
 	align-self: center;
 }
 
+@media (max-width: 1439px) {
+	.CenterBg{
+		width: 1700px;
+		min-width: 1700px;
+		bottom:-800px;
+	}
+}
+
 @media (max-width: 1023px) {
+
+
+	.CenterBg{
+		width: 1000px;
+		min-width: 1000px;
+		bottom:-600px;
+	}
 
 	.cta-block,.apply-btn{
 		width: 100%;
 	}
-
 	.cta-block{
 		margin-top: 0;
 		padding-left: 48px;
@@ -1377,6 +1434,12 @@ img{
 
 
 @media (max-width: 767px) {
+
+	.CenterBg{
+		width: 650px;
+		min-width: 650px;
+		bottom:-400px;
+	}
 
 	.apply-title{
 		gap: 8px;
@@ -1650,11 +1713,10 @@ align-items: center;
 	overflow: hidden;
 	transition: max-height 0.5s ease;
 	background: #F6F7FA;
-	padding: 0 32px;
 }
 
 .accordion-content p  {
-	padding: 24px 40px 32px 48px;
+	padding: 24px 40px 32px 56px;
 	border-top: 1px solid #B8BFCA;
 	font-size: 20px;
 }
@@ -1726,8 +1788,8 @@ align-items: center;
 		gap: 8px;
 		padding: 16px 64px 16px 48px;
 	}
-	.accordion-content{
-		padding: 0 16px;
+	.accordion-content p{
+		padding: 24px 40px 32px 48px
 	}
 	.accordion-label::after {
 		top: 22px;

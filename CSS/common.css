@@ -3,6 +3,8 @@ body{
 	font-family: "Noto Sans TC", sans-serif;
 	background-color: #072C87;
 	line-height: 1.7;
+    overflow-x: hidden;
+    margin: 0 auto;
 }
 
 /* Color */
@@ -102,7 +104,7 @@ body{
 
 .wrapper{
 	max-width: 1440px;
-    padding-top: 120px;
+    padding: 120px 120px 0px 120px;
 	margin: 0 auto;
 }
 
@@ -145,13 +147,32 @@ body{
 
 /* slogan-1 */
 .slogan-wrapper{
+    background-image: url(../IMG/BG_Elemnet/sloganbg.png);
+    background-size: cover;
 	margin-top: 120px;
 	padding: 40px;	
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .slogan{
 	background-color: #FF8D1E;
 	text-align: center;
+    position: relative;
+    min-height: 200px;
 }
+
+.ApplyBg{
+    position: absolute;
+    left: 0;
+    top: -589px;
+    width: 567px;
+    height: 589px;
+    z-index: -1;
+}
+
+
 
 @media (max-width: 1439px) {
 	.wrapper {
@@ -168,6 +189,15 @@ body{
     .contactus{
         margin-top: 96px;
     }
+
+    .ApplyBg{
+        position: absolute;
+        left: 0;
+        top: -300px;
+        width: auto;
+        height: 300px;
+        z-index: -1;
+    }
   }
 
 
@@ -181,6 +211,7 @@ body{
     .slogan-wrapper{
         margin-top: 64px;
 		padding: 24px;
+        background-size: contain;
 	}
 
     .contactus{
@@ -728,5 +759,11 @@ body.no-scroll {
 	text-align: center;
 	padding: 32px;
 	border-top: 1px solid white;
-    margin-bottom: 50.2px;
+    
+}
+
+@media (max-width: 767px) {
+    .web{
+        margin-bottom: 50.2px;
+    }
 }
