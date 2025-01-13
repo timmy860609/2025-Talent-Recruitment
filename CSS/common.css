@@ -395,6 +395,11 @@ body{
 	font-size: 18px;
     border: 1px solid white;
 }
+
+.edit p,.submit p{
+    font-weight: 500;
+}
+
 .submit{
 	background-color: #EB6100;
 }
