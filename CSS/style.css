@@ -171,6 +171,17 @@ img{
 	gap: 40px;
 }
 
+.AboutUs a{
+	display: inline-flex; 
+	align-items: center;
+    white-space: normal;
+}
+
+.AboutUs a img{
+	width: 20px;
+	height: 20px;
+}
+
 .Join-Logo{
 	width: 220px;
 	height: 40px;
@@ -260,7 +271,7 @@ img{
 @media (max-width: 1023px) {
 	
 	.BgSpace{
-		height: calc(900px - 8vw);
+		height: calc(900px - 6vw);
 		min-height: 700px; 
 		max-height: 900px; 
 	}
@@ -294,10 +305,10 @@ img{
 
 @media (max-width: 767px) {
 
-	.BgSpace{
-		height: calc(1068px - (100vw - 360px) * (390 / 407)); /* 根据需求调整公式 */
-		min-height: 760px;   /* 确保最小高度 */
-		max-height: 1070px;  /* 确保最大高度 */
+	.BgSpace {
+		height: calc(1068px - (100vw - 460px) * (650 / 407)); /* 进一步增加缩放比例 */
+		min-height: 800px;   /* 确保最小高度 */
+		max-height: 1800px;  /* 确保最大高度 */
 	}
 
 	.Join-Logo{
@@ -338,8 +349,6 @@ img{
 	.News{
 		gap: 0;
 	}
-
-	
 
 	.News span{
 		font-size: 14px;
@@ -1418,6 +1427,7 @@ img{
 	.cta-block{
 		margin-top: 0;
 		padding-left: 48px;
+		margin-top: 32px;
 	}
 
 	.date-line{
@@ -1509,6 +1519,7 @@ img{
 	.cta-block{
 		padding-left: 32px;
 		width: 100%;
+		margin-top:0;
 	}
 
 	.apply-btn{
@@ -1567,8 +1578,9 @@ img{
 	align-items: flex-end;
 }
 .reminder{
-    color: #EB6100;
-	font-size: 20px;
+	display: inline-block;
+	white-space: normal;
+    color: #FF5342;
 }
 .event-btn{
 	padding: 12px 24px;
