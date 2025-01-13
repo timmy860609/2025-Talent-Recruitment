@@ -595,7 +595,7 @@ img{
 	}
 
 	.point-number .number .percent{
-		font-size: clamp(10px, 2vw, 14px);
+		font-size: clamp(14px, 2vw, 18px);
 		margin-top:24px;
 	}
 
