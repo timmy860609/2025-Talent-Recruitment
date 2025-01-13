@@ -408,18 +408,18 @@ img{
 	padding-left: 44px;
 }
 
-.line{
-	width: 100%;
-    height: 1px;
-    background-color: #B8BFCA;
-}
 .PointBlock{
+	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	justify-content: center;
+	grid-template-columns: repeat(4, 1fr);
 	margin-top: 40px;
+	gap: 16px;
 }
 
+.point-line{
+	width: 100%;
+	display: flex;
+}
 .point-container{
 	display: flex;
 	flex-direction: column;
@@ -440,6 +440,7 @@ img{
 .point-number{
 	text-align: center;
 	width: 100%;
+	padding-right: 16px;
 	border-right: 1px solid #B8BFCA;
 }
 
@@ -457,17 +458,32 @@ img{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	gap: 16px;
+	gap: 4px;
 	position: relative;
 }
+
+.percent{
+	font-size: 20px;
+	margin-top: 24px;
+}
+
 .number p{
 	margin-top: 27px;
 }
-
+.number-text{
+	position: relative;
+}
 .number span{
 	position: absolute;
-	top: -6px;
+	top: 0;
+	left: 72px;
+	font-weight: 800;
 	font-size: 26px;
+}
+
+.point-number .number .special{
+	position: absolute;
+	left: 48px;
 }
 
 @media (max-width:1439px){
@@ -483,9 +499,10 @@ img{
 	.point-container p br{
 		display: none;
 	}
+
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
 
 	.FeatureCard{
 		gap: 8px;
@@ -494,9 +511,19 @@ img{
 	.card-block{
 		flex-direction: column;
 	}
+
+	.PointBlock{
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.point-number:nth-child(2n) {
+        border-right: none;
+    }
+
 	.BlockBg{
 		top: 1080px;
 	}
+
 }
 
 @media (max-width: 767px) {
@@ -507,7 +534,7 @@ img{
 	}
 
 	.number{
-		gap: 16px;
+		gap: 4px;
 	}
 
 	.BlockBg{
@@ -533,19 +560,14 @@ img{
 	}
 
 
-	.point-number{
-		border-right: none;
-	}
-
 	.number-block{
 		flex-wrap: wrap;
 	}
 
 	.PointBlock{
-		grid-template-columns: repeat(1, 1fr);
 		margin-top: 24px;
 		margin-bottom: 0;
-		gap: 40px;
+		gap: 24px;
 	}
 
 
@@ -553,14 +575,28 @@ img{
 		margin-top: 24px;
 	}
 
-	.point-container p{
+	.point-container p {
 		text-align: left;
-		margin-top: 17px;
 	}
 
 
 	.point-number p{
+		font-size: clamp(10px, 2vw, 14px);
 		text-align: center;
+	}
+
+	.point-number .number .percent{
+		font-size: clamp(10px, 2vw, 14px);
+		margin-top:24px;
+	}
+
+	.number span{
+		left: 52px;
+	}
+
+
+	.point-number .number .special{
+		left: 36px;
 	}
 
 }
@@ -1394,25 +1430,8 @@ img{
 	margin-top: 56px;
 	display: flex;
 	justify-content: center;
-	padding-right: 16px;
-	padding-bottom: 16px;
-	position: relative;
 }
 
-.cta-block::before,
-.cta-block::after {
-    content: '';
-    position: absolute;
-    pointer-events: none;
-}
-
-.cta-block::before {
-	top: 0;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(to bottom, #af151500 10%, #ffffff 70%); /* 右側漸層 */
-}
 
 .apply-btn{
 	padding: 16px;
@@ -1551,7 +1570,7 @@ img{
 	.cta-block{
 		padding-left: 32px;
 		width: 100%;
-		margin-top:0;
+		margin-top:32px;
 	}
 
 	.apply-btn{
@@ -1791,7 +1810,7 @@ align-items: center;
 	color: black;
 	cursor: pointer;
 	font-size: 24px;
-	font-weight: 700;
+	font-weight: 500;
 	margin-top: 40px;
 	position: relative;
 	gap: 16px;
