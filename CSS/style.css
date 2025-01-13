@@ -222,6 +222,7 @@ img{
 
 
 
+
 @media (min-width: 1920px) {
 	.Join-container{
 		top:calc(500px + 8vw)
@@ -444,10 +445,17 @@ img{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	gap: 10px;
+	gap: 16px;
+	position: relative;
 }
 .number p{
 	margin-top: 27px;
+}
+
+.number span{
+	position: absolute;
+	top: -6px;
+	font-size: 26px;
 }
 
 @media (max-width:1439px){
@@ -525,7 +533,7 @@ img{
 		grid-template-columns: repeat(1, 1fr);
 		margin-top: 24px;
 		margin-bottom: 0;
-		gap: 24px;
+		gap: 40px;
 	}
 
 
@@ -535,6 +543,7 @@ img{
 
 	.point-container p{
 		text-align: left;
+		margin-top: 17px;
 	}
 
 
@@ -1122,9 +1131,9 @@ img{
 
 @media (min-width: 1439px) {
 
-	.skill-text br{
-		display: none;
-	}
+	.skill-text br {
+        display: none;
+    }
 }
 
 @media (max-width: 1023px) {

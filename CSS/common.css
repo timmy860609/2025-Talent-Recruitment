@@ -208,10 +208,15 @@ body{
 		padding: 64px 24px 0px 24px;
 	}
 
+    .slogan{
+        min-height: 0;
+    }
+
     .slogan-wrapper{
         margin-top: 64px;
 		padding: 24px;
         background-size: contain;
+        height: auto;
 	}
 
     .contactus{
