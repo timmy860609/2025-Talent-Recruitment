@@ -245,7 +245,7 @@ img{
 
 @media (max-width: 1600px) {
     .BgSpace::after {
-        background-size: contain; /* 屏幕宽度较小，改为contain确保图像不裁剪 */
+        background-size: contain; 
     }
 }
 
@@ -300,6 +300,9 @@ img{
 		padding-bottom: 0;
 	}
 
+	.BgSpace::after{
+		background-image: url(../IMG/BG_Elemnet/JoinUs_BG_360.png);
+	}
 	
 }
 
@@ -925,7 +928,7 @@ img{
 
 	.chart{
 		justify-content: center;
-		margin: 24px 0px 24px 0px;
+		margin: 32px 0px 12px 0px;
 		gap: 1vw;
 		max-width: 560px;
 	}
@@ -1124,12 +1127,10 @@ img{
 }
 
 .video-title h3{
-	font-weight: 600;
 	color: #042190;
 }
 
 .video-title p{
-	font-size: 18px;
 	margin-top: 4px;
 	margin-bottom: 8px;
 }
@@ -1233,7 +1234,10 @@ img{
 	.video-title p{
 		margin-top: 0;
 		margin-bottom: 4px;
-		font-size: 14px;
+	}
+
+	.video-title h3{
+		font-size: 24px;
 	}
 
 }
@@ -1252,15 +1256,18 @@ img{
 	background-color: white;
 }
 
-/* .CenterBg{
+.CenterBg{
+	background-image: url(../IMG/BG_Elemnet/CenterBg.png);
 	width: 1920px;
-	min-width: 1920px;
+	height: 1935px;
 	position: absolute;
-	bottom:-1000px;
+	background-size: cover;
+	background-position: center;
+	bottom: -1000px;
+	z-index: -2;
 	left: 50%;
 	transform: translateX(-50%);
-	z-index: -2;
-} */
+} 
 
 .apply-list{
 	width: 100%;
@@ -1379,8 +1386,25 @@ img{
 	margin-top: 56px;
 	display: flex;
 	justify-content: center;
+	padding-right: 16px;
+	padding-bottom: 16px;
+	position: relative;
 }
 
+.cta-block::before,
+.cta-block::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+}
+
+.cta-block::before {
+	top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #af151500 10%, #ffffff 70%); /* 右側漸層 */
+}
 
 .apply-btn{
 	padding: 16px;
@@ -1404,22 +1428,17 @@ img{
 	align-self: center;
 }
 
-@media (max-width: 1439px) {
-	/* .CenterBg{
-		width: 1700px;
-		min-width: 1700px;
-		bottom:-800px;
-	} */
-}
+
 
 @media (max-width: 1023px) {
 
 
-	/* .CenterBg{
-		width: 1000px;
-		min-width: 1000px;
+	.CenterBg{
+		background-image: url(../IMG/BG_Elemnet/CenterBg_360.png);
+		width: 100%;
+		height: 1200px;
 		bottom:-600px;
-	} */
+	}
 
 	.cta-block,.apply-btn{
 		width: 100%;
@@ -1454,11 +1473,14 @@ img{
 
 @media (max-width: 767px) {
 
-	/* .CenterBg{
+	.CenterBg{
 		width: 100%;
-		min-width: 650px;
+		height: 960px;
 		bottom:-400px;
-	} */
+		background-size: contain;
+		background-repeat: no-repeat;
+		bottom: -600px;
+	}
 
 	.apply-title{
 		gap: 8px;
@@ -1487,7 +1509,6 @@ img{
 	}
 
 	.apply-list{
-		gap: 24px;
 		margin-top: 32px;
 	}
 
