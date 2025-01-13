@@ -671,7 +671,7 @@ img{
 	}
 
 	.training-triangle{
-		right: -120px;
+		right: 0;
 	}
 	
 	.training-square{
@@ -723,7 +723,6 @@ img{
 	}
 
 	.training-triangle{
-		right: -20px;
 		bottom: 820px;
 	}
 	
@@ -1450,9 +1449,6 @@ img{
 		bottom:-600px;
 	}
 
-	.square_soft{
-		right: -32px;
-	}
 
 	.cta-block,.apply-btn{
 		width: 100%;
