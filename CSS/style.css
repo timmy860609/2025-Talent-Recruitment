@@ -215,6 +215,10 @@ img{
 	border-right: #B8BFCA 1px solid;
 }
 
+.News-text{
+	font-weight: 600;
+}
+
 .News:nth-child(4n) {
 	border-right: none;
 }
@@ -689,12 +693,26 @@ img{
 	color: #072C87;
 	background-color: #D3E3FF;
 	margin-top: 16px;
+	position: relative;
+}
+
+.train-chip{
+	padding: 4px 8px;
+	font-size: 14px;
+	background-color: #042190;
+	color: white;
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	width: 68px;
 }
 
 .Step2 .train-item{
 	color:#EA5A11;
 	background-color: #FFE8D2;
 }
+
+
 
 
 @media (max-width: 1439px) {
@@ -728,6 +746,12 @@ img{
 		flex-direction: column;
 		gap: 16px;
 	}
+
+	.train-chip{
+		top: -4px;
+		right: -4px;
+	}
+
 }
 
 @media (max-width: 767px) {
@@ -744,9 +768,21 @@ img{
 		gap: 24px;
 	}
 	.train-item{
-		flex-direction: row;
-		gap: 24px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
 	}
+
+	.train-item .body2{
+		order: 1;
+	}
+
+	.train-chip{
+		position: static;
+	}
+}
+
 	.train-line::after{
 		bottom:-24px; /* 垂直置中 */
 		left: 0; /* 水平置中 */
@@ -768,12 +804,13 @@ img{
 		z-index: -1;
 	}
 	
-}
+
 
 
 /* -------------carrer------------- */
 .carrer-pic{
-	width: 72px;
+	width: 10vw;
+	max-width: 120px;
 }
 .CarrerBlock{
 	width: 100%;
@@ -816,6 +853,7 @@ img{
 	align-items: center;
 	text-align: center;
 	gap: 12px;
+	position: relative;
 }
 .carrer-item-blue p,.carrer-item-green p,.carrer-item-purple p,.carrer-item-orange p{
 	color: white;
@@ -825,7 +863,7 @@ img{
 }
 /* blue */
 .carrer-item-blue{
-	padding: 24px;
+	padding: 24px 12px 24px 12px;
 	background-color: #8A9FB0;
 }
 .chart-line-blue{
@@ -836,7 +874,7 @@ img{
 
 /* green */
 .carrer-item-green{
-	padding: 24px 24px 84px 24px;
+	padding: 24px 12px 84px 12px;
 	background-color: #456EBE;
 }
 .chart-line-green{
@@ -847,7 +885,7 @@ img{
 
 /* purple */
 .carrer-item-purple{
-	padding: 24px 24px 144px 24px;
+	padding: 24px 12px 144px 12px;
 	background-color: #74C2FF;
 }
 .chart-line-purple{
@@ -858,7 +896,7 @@ img{
 
 /*orange */
 .carrer-item-orange{
-	padding: 24px 24px 204px 24px;
+	padding: 24px 12px 204px 12px;
 	background-color: #FF9329;
 }
 .chart-line-orange{
@@ -867,6 +905,13 @@ img{
 	height: auto;
 }
 
+.lineangle{
+	width: 1.5vw;
+	height: 1.5vw;
+	top: -1px;
+	right: 0;
+	position: absolute;
+}
 
 @media (max-width: 1439px) {
 	.chart{
@@ -896,6 +941,14 @@ img{
 	.carrer-item-orange{
 		padding: 24px 16px 204px 16px;
 	}
+
+	.carrer-pic{
+		width: 10vw;
+	}
+
+	.carrer-text{
+		font-size: 2vw;
+	}
 }
 
 @media (max-width: 1023px) {
@@ -910,12 +963,9 @@ img{
 
 	.carrer-box{
 		padding: 8px 12px;
-		font-size: 20px;
+		font-size: 2vw;
 	}
 
-	.carrer-text{
-		font-size: 16px;
-	}
 
 	.chart-line-blue,.chart-line-green,.chart-line-purple,.chart-line-orange{
 		padding: 12px 8px;
@@ -1085,6 +1135,9 @@ img{
 	display: flex;
 	flex-direction: column;
 }
+.card-content p{
+	font-weight: 500;
+}
 
 .ma-talk{
 	display: flex;
@@ -1125,6 +1178,7 @@ img{
 	background-color: #F3F6FA;
 	margin-top: 24px;
 }
+
 
 .ma-life{
 	display: flex;
@@ -1172,9 +1226,14 @@ img{
 
 @media (min-width: 1439px) {
 
-	.skill-text br {
+	.skill-text p br {
         display: none;
     }
+
+	.ma-intro p br{
+		display: none;
+	}
+
 }
 
 @media (max-width: 1023px) {
@@ -1252,6 +1311,7 @@ img{
 
 	.ma-video{
 		padding: 0;
+		flex: 1;
 	}
 
 	.ma-tab{
@@ -1448,6 +1508,11 @@ img{
         24px 100%,              
         0 calc(100% - 24px)   
     );
+	transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
+}
+
+.apply-btn:hover,.event-btn:hover{
+	transform: scale(1.1);
 }
 
 .goright{
@@ -1627,6 +1692,7 @@ img{
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
+	gap: 16px;
 }
 .reminder{
 	display: inline-block;
@@ -1640,6 +1706,14 @@ img{
 	font-size: 18px;
 	width: fit-content;
 	margin-left: 44px;
+	clip-path: polygon(
+        0 0, 
+        calc(100% - 12px) 0,   
+        100% 12px,              
+        100% 100%,              
+        12px 100%,              
+        0 calc(100% - 12px)   
+    );
 }
 
 .apply-time{
@@ -1674,6 +1748,7 @@ img{
 	.time-item{
 		flex-direction: column;
 		align-items: flex-start;
+		gap: 0px;
 	}
 
 	.time-item p,.local-item,.event-btn{
@@ -1728,6 +1803,7 @@ img{
 		text-align: center;
 		padding: 8px 16px;
 		margin-top: 16px;
+		transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
 	}
 	
 	.reminder{

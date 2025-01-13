@@ -9,7 +9,7 @@
 h1{
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 600;
     font-style: normal;
     font-size: 40px;
 }
@@ -17,14 +17,14 @@ h1{
 h2{
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 32px;
     font-style: normal;
 }
 h3{
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 800;
+    font-weight: 600;
     font-size: 24px;
     font-style: normal;
 }
@@ -32,14 +32,14 @@ h3{
     font-family: "Noto Sans TC", sans-serif;
     font-size: 24px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 150%;
 }
 .body2{
     font-family: "Noto Sans TC", sans-serif;
     font-size: 20px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 150%;
 }
 .body3{
@@ -61,7 +61,7 @@ p{
 link, a{
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
     text-decoration: none;
     display: inline-block;
