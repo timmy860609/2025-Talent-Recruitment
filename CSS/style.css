@@ -1744,6 +1744,10 @@ img{
 
 /* -----FAQ------ */
 
+.FAQ{
+	position: relative;
+}
+
 .accordion {
 	width: 100%;
 }
@@ -1826,6 +1830,18 @@ align-items: center;
 	transform: rotate(180deg); /* 可選效果，根據需求旋轉 */
 }
 
+.BottonmBg{
+	position: absolute;
+	background-image: url(../IMG/BG_Elemnet/BottomBg.png);
+	width: 100%;
+	height: 800px;
+	bottom: -120px;
+	left: 0;
+	z-index: -1;
+	background-size: cover;
+	background-position: center;
+}
+
 @media (max-width: 1439px) {
 	.accordion-label{
 		padding: 32px 80px 24px 56px;
@@ -1847,6 +1863,11 @@ align-items: center;
 	}
 	.accordion-label::after {
 		top: 22px;
+	}
+	.BottonmBg{
+		background-image: url(../IMG/BG_Elemnet/BottomBg_360.png);
+		height: 163px;
+		bottom: -66px;
 	}
 }
 /* ----------yuanta--------- */

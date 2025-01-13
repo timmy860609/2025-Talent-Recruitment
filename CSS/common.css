@@ -173,6 +173,14 @@ body{
 }
 
 
+.SloganElement{
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 333px;
+    z-index: -2;
+}
+
 
 @media (max-width: 1439px) {
 	.wrapper {
@@ -198,8 +206,17 @@ body{
         height: 300px;
         z-index: -1;
     }
+    .SloganElement{
+        width: 300px;
+        top: 40px;
+    }
   }
-
+  @media (max-width: 1023px) {
+    .SloganElement{
+        width: 240px;
+        top: 60px;
+    }
+  }
 
 @media (max-width: 767px) {
 
@@ -244,7 +261,10 @@ body{
     .Title{
         margin-bottom: 24px;
     }
-
+    .SloganElement{
+        width: 120px;
+        top: 60px;
+    }
     
   }
 
