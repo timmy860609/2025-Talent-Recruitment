@@ -313,9 +313,9 @@ img{
 @media (max-width: 767px) {
 
 	.BgSpace {
-		height: calc(1068px - (100vw - 460px) * (650 / 407)); /* 进一步增加缩放比例 */
+		height: calc(1068px - (110vw - 460px) * (650 / 407)); /* 进一步增加缩放比例 */
 		min-height: 800px;   /* 确保最小高度 */
-		max-height: 1800px;  /* 确保最大高度 */
+		max-height: 1600px;  /* 确保最大高度 */
 	}
 
 	.Join-Logo{
@@ -359,6 +359,10 @@ img{
 
 	.News span{
 		font-size: 14px;
+	}
+
+	.Join-Card .Title{
+		font-size: clamp(20px, 10vw, 24px);
 	}
 }
 
@@ -593,7 +597,9 @@ img{
 	}
 
 	.number span{
-		left: 52px;
+		font-size: 18px;
+		left: 48px;
+		top: -6px;
 	}
 
 
@@ -691,6 +697,7 @@ img{
 	position: relative;
 }
 
+
 .train-chip{
 	padding: 4px 8px;
 	font-size: 14px;
@@ -698,7 +705,7 @@ img{
 	color: white;
 	position: absolute;
 	top: -8px;
-	right: -8px;
+	right: 72px;
 	width: 68px;
 }
 
@@ -727,6 +734,11 @@ img{
 		left: -160px;
 		bottom: 5%;
 	}
+
+	.train-chip{
+		top: -8px;
+		right: clamp(13px, 1vw, 20px);
+	}
 }
 
 @media (max-width: 1023px) {
@@ -743,10 +755,18 @@ img{
 	}
 
 	.train-chip{
-		top: -4px;
-		right: -4px;
+		position: static;
 	}
 
+	.train-item{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 6px;
+	}
+	.train-item .body2{
+		order: 1;
+	}
 }
 
 @media (max-width: 767px) {
@@ -762,20 +782,8 @@ img{
 		flex-direction: column;
 		gap: 24px;
 	}
-	.train-item{
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 4px;
-	}
-
-	.train-item .body2{
-		order: 1;
-	}
-
-	.train-chip{
-		position: static;
-	}
+	
+	
 }
 
 	.train-line::after{
@@ -804,8 +812,8 @@ img{
 
 /* -------------carrer------------- */
 .carrer-pic{
-	width: 10vw;
-	max-width: 120px;
+	width: 15vw;
+	max-width: 160px;
 }
 .CarrerBlock{
 	width: 100%;
@@ -848,7 +856,7 @@ img{
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	gap: 12px;
+	gap: 0px;
 	position: relative;
 }
 .carrer-item-blue p,.carrer-item-green p,.carrer-item-purple p,.carrer-item-orange p{
@@ -939,7 +947,7 @@ img{
 	}
 
 	.carrer-pic{
-		width: 10vw;
+		width: 12vw;
 	}
 
 	.carrer-text{
@@ -953,9 +961,6 @@ img{
 		gap: 8px;
 	}
 
-	.carrer-pic{
-		width: 56px;
-	}
 
 	.carrer-box{
 		padding: 8px 12px;
@@ -999,9 +1004,6 @@ img{
 		margin-top: 40px;
 	}
 
-	.carrer-pic{
-		width: 6vw;
-	}
 
 	.chart{
 		justify-content: center;
@@ -1167,6 +1169,8 @@ img{
     grid-template-rows: auto auto; 
     grid-gap: 24px;
 }
+
+.ma-block
 
 .ma-intro{
 	text-align: center;
@@ -1867,7 +1871,7 @@ align-items: center;
 .accordion-content p  {
 	padding: 24px 40px 32px 56px;
 	border-top: 1px solid #B8BFCA;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .accordion-input:checked + .accordion-label + .accordion-content {

@@ -266,6 +266,10 @@ body{
         top: 60px;
     }
     
+    .SubTitle{
+        margin-bottom: 8px;
+    }
+
   }
 
 
@@ -352,18 +356,26 @@ body{
     z-index: 100;
 }
 
-
 .edit-style,.submit-style{
-    background-image: url(../IMG/BG_Elemnet/Edit.png);
     width: 100px;
     height: 100px;
     background-size:cover;
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
 }
 
+.edit-style{
+    background-image: url(../IMG/BG_Elemnet/Edit.png);
+    
+}
 .submit-style{
     background-image: url(../IMG/BG_Elemnet/Submit.png);
 }
+
+.edit-style:hover,.submit-style:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3));
+}
+
 
 
 .float-btn{
@@ -404,9 +416,6 @@ body{
 	background-color: #EB6100;
 }
 
-@media (max-width: 1439px) {
-
-}
 
 @media (max-width: 767px) {
     .float-btn-desk{
@@ -585,10 +594,66 @@ body{
 
 
 
+/* tooltip */
 
+.float-ig{
+    position: relative;
+    background-image: url(../IMG/BG_Elemnet/float_ig_360.png);
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    bottom: 296px;
+    right: 60px;
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.float-ig:hover {
+    transform: scale(1.1); /* 放大效果 */
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3)); /* 使用 filter 的陰影效果 */
+}
+.tooltip {
+    position: absolute;
+    top: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* 箭頭在工具提示的底部 */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #000000 transparent transparent transparent; /* 上方箭頭 */
+}
 
+.float-ig:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
 
+@media (max-width: 767px) {
+
+    .tooltip{
+        visibility: visible;
+        opacity: 1;
+    }
+    .float-ig{
+        bottom: 88px;
+        right: 24px;
+    }
+}
 /* ------------	tabs/MA --------------*/
 
 
@@ -771,10 +836,6 @@ body.no-scroll {
     margin-top: 40px;
 }
 
-.ig:hover,.edit-style:hover,.submit-style:hover {
-	transform: scale(1.1);
-    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3));
-}
 
 .about{
 	max-width: 1200px;
@@ -797,6 +858,12 @@ body.no-scroll {
     height: 51px;
 }
 
+.community{
+    display: flex;
+    gap: 16px;
+
+}
+
 @media (max-width: 767px) {
     .web{
         margin-bottom: 50.2px;
@@ -806,5 +873,7 @@ body.no-scroll {
         gap: 16px;
         justify-content: center;
         align-items: center;
+        text-align: center;
+        gap: 24px;
     }
 }
