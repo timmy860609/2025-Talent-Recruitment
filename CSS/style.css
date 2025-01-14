@@ -505,6 +505,12 @@ img{
 		top: 860px;
 	}
 
+	
+
+	.point-container p br{
+		display: none;
+	}
+
 }
 
 @media (max-width: 1023px) {
@@ -525,6 +531,7 @@ img{
 	.BlockBg{
 		top: 1080px;
 	}
+
 
 }
 
@@ -1170,7 +1177,6 @@ img{
     grid-gap: 24px;
 }
 
-.ma-block
 
 .ma-intro{
 	text-align: center;
@@ -1508,11 +1514,12 @@ img{
         24px 100%,              
         0 calc(100% - 24px)   
     );
-	transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
+	transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.apply-btn:hover,.event-btn:hover{
-	transform: scale(1.1);
+.apply-btn:hover,.event-btn:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); 
 }
 
 .goright{
@@ -1714,6 +1721,7 @@ img{
         12px 100%,              
         0 calc(100% - 12px)   
     );
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .apply-time{
