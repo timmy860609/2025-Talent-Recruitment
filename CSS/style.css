@@ -453,6 +453,7 @@ img{
 }
 
 .point-number p{
+	color: black;
 	font-weight: 600;
 }
 
@@ -525,6 +526,7 @@ img{
 
 	.PointBlock{
 		grid-template-columns: repeat(3, 1fr);
+		padding: 0;
 	}
 
 
