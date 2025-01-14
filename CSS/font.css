@@ -50,6 +50,10 @@ h3{
     font-size: 18px;
 }
 
+.bold{
+    font-weight: 600;
+}
+
 p{
     font-family: "Noto Sans TC", sans-serif;
     font-optical-sizing: auto;
