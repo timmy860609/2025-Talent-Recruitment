@@ -415,7 +415,7 @@ img{
 .PointBlock{
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	margin-top: 40px;
 	gap: 16px;
 }
@@ -446,6 +446,10 @@ img{
 	width: 100%;
 	padding-right: 16px;
 	border-right: 1px solid #B8BFCA;
+}
+
+.point-number p{
+	font-weight: 600;
 }
 
 .point-number:last-child {
@@ -485,10 +489,6 @@ img{
 	font-size: 26px;
 }
 
-.point-number .number .special{
-	position: absolute;
-	left: 48px;
-}
 
 @media (max-width:1439px){
 	.card-block{
@@ -499,9 +499,6 @@ img{
 	}
 	.BlockBg{
 		top: 860px;
-	}
-	.point-container p br{
-		display: none;
 	}
 
 }
@@ -517,12 +514,9 @@ img{
 	}
 
 	.PointBlock{
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 	}
 
-	.point-number:nth-child(2n) {
-        border-right: none;
-    }
 
 	.BlockBg{
 		top: 1080px;
@@ -551,9 +545,7 @@ img{
 		margin-top: 19px;
 	}
 
-	.number h1{
-		font-size:32px;
-	}
+	
 
 	.card-block{
 		text-align: center;
@@ -581,22 +573,23 @@ img{
 		margin-top: 40px;
 	}
 
-	.point-container p {
-		text-align: left;
-	}
 
 	.point-number{
 		padding-right: 8px;
 	}
 
+	.number h1{
+		font-size: clamp(24px, 2vw, 40px);
+	}
+
 	.point-number p{
-		font-size: clamp(12px, 2vw, 14px);
+		font-size: clamp(10px, 2vw, 48px);
 		text-align: center;
 	}
 
 	.point-number .number .percent{
-		font-size: clamp(14px, 2vw, 18px);
-		margin-top:24px;
+		font-size: clamp(14px, 4vw, 18px);
+		margin-top:2vw;
 	}
 
 	.number span{
@@ -604,9 +597,6 @@ img{
 	}
 
 
-	.point-number .number .special{
-		left: 36px;
-	}
 
 }
 /* -------------Training------------- */
