@@ -1,4 +1,31 @@
+
+//goTop
+
+document.addEventListener('DOMContentLoaded', function () {
+    const goTopButton = document.querySelector('.goTop');
+
+    // 滾動事件監聽
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 600) {
+            goTopButton.style.display = 'block';  // 顯示 GoTop 按鈕
+        } else {
+            goTopButton.style.display = 'none';   // 隱藏 GoTop 按鈕
+        }
+    });
+
+    // 點擊事件：回到頂部
+    goTopButton.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'  // 平滑滾動效果
+        });
+    });
+});
+
+
 //popup
+
+
 function openPopup(cardElement) {
     const title = cardElement.getAttribute('data-title');
     const subtitle = cardElement.getAttribute('data-subtitle');

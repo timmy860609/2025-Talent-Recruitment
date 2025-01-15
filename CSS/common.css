@@ -674,6 +674,7 @@ body{
 	transition: color 0.3s ease;
 	position: sticky;
 	top: 79px;
+    z-index: 99999;
   }
   .tabs__label::after{
     content: "";
@@ -702,6 +703,7 @@ body{
   .tabs__radio:checked + .tabs__label {
 	color: #0053AC;
     background-color: white;
+    z-index: 999999;
   }
 
   .tabs__radio:checked{
@@ -875,5 +877,35 @@ body.no-scroll {
         align-items: center;
         text-align: center;
         gap: 24px;
+    }
+}
+
+
+.goTop {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    right: 160px;
+    bottom: 60px;
+    opacity: .7;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    background-image: url("../IMG/BG_Elemnet/goTop.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.goTop:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3)); /* 增加陰影效果 */
+}
+
+@media (max-width: 767px) {
+    .goTop{
+        width: 48px;
+        right: 24px;
+        bottom: 200px;
     }
 }
