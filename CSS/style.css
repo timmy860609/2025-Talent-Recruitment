@@ -1816,9 +1816,6 @@ img{
 		transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
 	}
 	
-	.reminder{
-		font-size: 14px;
-	}
 	.event-time{
 		gap: 0;
 	}
