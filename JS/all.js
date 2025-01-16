@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //popup
 
+// 儲存當前滾動位置
+let scrollPosition = 0;
 
 function openPopup(cardElement) {
     const title = cardElement.getAttribute('data-title');
@@ -32,56 +34,43 @@ function openPopup(cardElement) {
     const content = cardElement.getAttribute('data-content');
     const additionalImg = cardElement.getAttribute('data-additional-img');
 
-
+    // 更新彈窗的內容
     document.getElementById('popup-title').textContent = title;
     document.getElementById('popup-subtitle').textContent = subtitle;
     document.getElementById('popup-text').textContent = content;
-
 
     const additionalImgElement = document.getElementById('popup-additional-img');
     additionalImgElement.src = additionalImg || '';
     additionalImgElement.style.display = additionalImg ? 'block' : 'none';
 
-
-    document.getElementById('popup').style.display = 'block';
+    // 保存滾動位置，並禁用滾動
+    scrollPosition = window.scrollY;
+    document.body.style.top = `-${scrollPosition}px`; // 固定當前滾動位置
     document.body.classList.add('no-scroll'); // 禁用滾動
+
+    // 顯示彈窗
+    document.getElementById('popup').style.display = 'block';
 }
 
 function closePopup() {
     const popup = document.getElementById('popup');
-    popup.style.display = 'none'; 
-    document.body.classList.remove('no-scroll'); 
+    popup.style.display = 'none';
+
+    // 恢復滾動
+    document.body.classList.remove('no-scroll');
+    document.body.style.top = ''; // 清除固定樣式
+    window.scrollTo(0, scrollPosition); // 恢復滾動位置
 }
 
+// 點擊彈窗外部關閉彈窗
 document.getElementById('popup').addEventListener('click', function(event) {
-    
     if (event.target === this) {
         closePopup();
     }
 });
 
+// 防止點擊彈窗內部時觸發關閉
 const popupContent = document.querySelector('.popup-content');
 popupContent.addEventListener('click', (e) => e.stopPropagation());
-
-
-
-
-// 等待 DOM 加載完成後執行
-document.addEventListener('DOMContentLoaded', function() {
-    // 當點擊封面圖片時，隱藏圖片並顯示影片
-    document.getElementById('videoThumbnail').addEventListener('click', function() {
-        // 隱藏封面圖片
-        document.getElementById('videoThumbnail').style.display = 'none';  
-
-        // 顯示影片並開始播放
-        const videoIframe = document.getElementById('videoIframe');
-        videoIframe.src = "https://drive.google.com/file/d/1BT-bW1UJhLUo4QQAl7aWuRJ8COD_d3ZB/preview";  // 設定影片的 URL (直接播放影片)
-        videoIframe.style.display = 'block';  // 顯示影片
-    });
-});
-
-
-
-
 
 
