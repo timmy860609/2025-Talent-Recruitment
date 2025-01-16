@@ -29,7 +29,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.7;
+	background-color: #072C87;
+    overflow-x: hidden;
+    margin: 0 auto;
 }
 ol, ul {
 	list-style: none;
@@ -313,9 +316,9 @@ img{
 @media (max-width: 767px) {
 
 	.BgSpace {
-		height: calc(1068px - (110vw - 460px) * (650 / 407)); /* 进一步增加缩放比例 */
-		min-height: 800px;   /* 确保最小高度 */
-		max-height: 1600px;  /* 确保最大高度 */
+		height: calc(1068px - (110vw - 460px) * (650 / 407)); 
+		min-height: 800px;   
+		max-height: 1600px; 
 	}
 
 	.Join-Logo{
@@ -1174,7 +1177,7 @@ img{
 
 .ma-grid{
 	display: grid;
-	grid-template-columns: 1fr 1fr; /* 一列1份，一列2份 */
+	grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto auto; 
     grid-gap: 24px;
 }
@@ -1921,7 +1924,7 @@ align-items: center;
 	display: inline-block;
 	width: 24px;
 	height: 24px;
-	background-image: url(../IMG/angle-down_outline.svg); /* 收起圖標 */
+	background-image: url(../IMG/angle-down_outline.svg); 
 	background-size: contain;
 	transition: transform 0.3s ease;
 	background-repeat: no-repeat;
@@ -1932,7 +1935,7 @@ align-items: center;
 }
 
 .accordion-input:checked + .accordion-label::after {
-	transform: rotate(180deg); /* 可選效果，根據需求旋轉 */
+	transform: rotate(180deg); 
 }
 
 .BottonmBg{
