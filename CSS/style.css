@@ -33,6 +33,7 @@ body {
 	background-color: #072C87;
     overflow-x: hidden;
     margin: 0 auto;
+	font-family: "Noto Sans TC", sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -195,7 +196,7 @@ img{
 	flex-direction: column;
 	align-items: center;
 	gap: 40px;
-	padding: 48px 24px;
+	padding: 48px;
 	background-color: #F8F8F8;
 	margin-top: 40px;
 }
@@ -205,7 +206,7 @@ img{
 	grid-template-columns: repeat(4, 1fr);
 	justify-content: space-around;
 	height: auto;
-	gap: 24px;
+	gap: 40px;
 }
 
 .News{
@@ -214,7 +215,7 @@ img{
 	flex-direction: column;
 	gap: 4px;
 	color: black;
-	padding-right:24px;
+	padding-right:40px;
 	border-right: #B8BFCA 1px solid;
 }
 
@@ -345,11 +346,7 @@ img{
 
 	.Join-Content{
 		padding: 24px 16px;
-	}
-
-	.Hor-Line{
-		width: 100px;
-		height: 100px;
+		gap: 40px;
 	}
 
 	.Join-News{
@@ -404,7 +401,6 @@ img{
 .card-block{
 	display: flex;
 	gap: 40px;
-	margin-bottom: 56px;
 }
 
 .FeatureCard{
@@ -412,7 +408,7 @@ img{
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	gap: 16px;
+	gap: 4px;
 }
 
 .FeatureCard p{
@@ -435,7 +431,7 @@ img{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-top: 56px;
+	margin-top: 40px;
 }
 
 .point-container p{
@@ -454,6 +450,14 @@ img{
 	padding-right: 16px;
 	border-right: 1px solid #B8BFCA;
 }
+
+.line {
+	flex: 1; 
+	height: 1px; 
+	background-color: #B8BFCA; 
+  }
+
+
 
 .point-number p{
 	color: black;
@@ -825,7 +829,7 @@ img{
 /* -------------carrer------------- */
 .carrer-pic{
 	width: 15vw;
-	max-width: 160px;
+	max-width: 100px;
 }
 .CarrerBlock{
 	width: 100%;
@@ -840,10 +844,11 @@ img{
 }
 .chart{
 	width: 100%;
+	padding: 0px 56px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
-	gap: 40px;
+	gap: 24px;
 	margin: 48px 0px 24px 0px;
 }
 
@@ -860,7 +865,7 @@ img{
 .carrer-text{
 	font-weight: 600;
 	text-align: center;
-	font-size: 28px;
+	font-size: 24px;
 }
 
 .carrer-item-blue,.carrer-item-green,.carrer-item-purple,.carrer-item-orange{
@@ -890,7 +895,7 @@ img{
 
 /* green */
 .carrer-item-green{
-	padding: 24px 12px 84px 12px;
+	padding: 24px 12px 64px 12px;
 	background-color: #456EBE;
 }
 .chart-line-green{
@@ -901,7 +906,7 @@ img{
 
 /* purple */
 .carrer-item-purple{
-	padding: 24px 12px 144px 12px;
+	padding: 24px 12px 108px 12px;
 	background-color: #74C2FF;
 }
 .chart-line-purple{
@@ -912,7 +917,7 @@ img{
 
 /*orange */
 .carrer-item-orange{
-	padding: 24px 12px 204px 12px;
+	padding: 24px 12px 110px 12px;
 	background-color: #FF9329;
 }
 .chart-line-orange{
@@ -932,6 +937,7 @@ img{
 @media (max-width: 1439px) {
 	.chart{
 		gap: 16px;
+		max-width: 1024px;
 	}
 
 	.carrer-text{
@@ -942,20 +948,21 @@ img{
 		font-size: 3vw;
 	}
 
+
 	.carrer-item-blue{
 		padding: 24px 16px 24px 16px;
 	}
 
 	.carrer-item-green{
-		padding: 24px 16px 84px 16px;
+		padding: 24px 16px 64px 16px;
 	}
 
 	.carrer-item-purple{
-		padding: 24px 16px 144px 16px;
+		padding: 24px 16px 104px 16px;
 	}
 
 	.carrer-item-orange{
-		padding: 24px 16px 204px 16px;
+		padding: 24px 16px 114px 16px;
 	}
 
 	.carrer-pic{
@@ -963,7 +970,12 @@ img{
 	}
 
 	.carrer-text{
-		font-size: 2vw;
+		font-size: 1.6vw;
+	}
+
+	.carrer-box{
+		padding: 8px 16px;
+		font-size: 20px;
 	}
 }
 
@@ -984,29 +996,22 @@ img{
 		padding: 12px 8px;
 		max-width: 160px;
 	}
-
-	.carrer-item-blue,.carrer-item-orange,.carrer-item-purple,.carrer-item-green{
-		gap: 8px;	
-	}
 	.carrer-item-blue{
 		padding: 16px 8px 16px 8px;
 	}
 
 	.carrer-item-green{
-		padding: 16px 8px 64px 8px;
+		padding: 16px 8px 40px 8px;
 	}
 
 	.carrer-item-purple{
-		padding: 16px 8px 112px 8px;
+		padding: 16px 8px 64px 8px;
 	}
 
 	.carrer-item-orange{
-		padding: 16px 8px 160px 8px;
+		padding: 16px 8px 58px 8px;
 	}
 
-	.chart-text{
-		text-align: left;
-    }	
 }
 
 @media (max-width: 767px) {
@@ -1019,9 +1024,10 @@ img{
 
 	.chart{
 		justify-content: center;
-		margin: 32px 0px 12px 0px;
-		gap: 1vw;
+		margin: 24px 0px 12px 0px;
+		gap: 4px;
 		max-width: 560px;
+		padding: 0;
 	}
 	.chart-block{
 		padding: 24px 16px;
@@ -1048,19 +1054,19 @@ img{
 	
 
 	.carrer-item-blue{
-		padding: 8px 2px 8vw 2px;
+		padding: 8px 2px 8px 2px;
 	}
 
 	.carrer-item-green{
-		padding: 8px 4px 12vw 2px;
+		padding: 8px 4px 24px 2px;
 	}
 
 	.carrer-item-purple{
-		padding: 8px 4px 16vw 2px;
+		padding: 8px 4px 40px 2px;
 	}
 
 	.carrer-item-orange{
-		padding: 8px 2px 18vw 2px;
+		padding: 8px 2px 38px 2px;
 	}
 
 
@@ -1094,6 +1100,7 @@ img{
 	border-radius: 100px;
 	text-align: center;
 	font-weight: 600;
+	font-size: 18px;
 }
 .skill-text{
 	text-align: center;
@@ -1108,7 +1115,7 @@ img{
 
 .ShareMA{
     background-color: white;
-    padding: 56px 24px 40px 24px;
+    padding: 56px 40px 40px 40px;
   }
 
 .ma-card{
@@ -1185,9 +1192,9 @@ img{
 
 .ma-intro{
 	text-align: center;
-	padding: 40px 24px;
-	background-color: #F3F6FA;
+	padding: 40px 24px 0px 24px;
 	margin-top: 24px;
+	border-top: 1px solid #B8BFCA;
 }
 
 
@@ -1394,7 +1401,7 @@ img{
 
 
 .dead-line{
-	font-size: 36px;
+	font-size: 32px;
 	font-weight: 700;
 }
 
@@ -1409,7 +1416,7 @@ img{
 .apply-item span{
 	font-size: 20px;
 	font-weight: 600;
-	margin-top: 18px;
+	margin-top: 15px;
 }
 
 .apply-date{
@@ -1444,9 +1451,8 @@ img{
 
 .custom-list li {
     position: relative; 
-    padding-left: 20px; 
     margin-bottom: 10px; 
-	font-size: 20px;
+	font-size: 18px;
 	padding-left: 68px;
 }
 
@@ -1692,9 +1698,6 @@ img{
 	width: 360px;
 }
 
-.event-name p{
-	font-size: 20px;
-}
 
 .event-time{
 	display: flex;
@@ -1858,6 +1861,7 @@ img{
 
 .accordion {
 	width: 100%;
+	margin-top: 16px;
 }
 
 .accordion-block{
@@ -1894,15 +1898,15 @@ align-items: center;
 .accordion-label {
 	display: flex;
 	align-items: center;
-	padding: 32px 32px 24px 56px;
+	padding: 24px 32px 24px 56px;
 	background: #F6F7FA;
 	color: black;
 	cursor: pointer;
 	font-size: 24px;
 	font-weight: 500;
-	margin-top: 40px;
 	position: relative;
 	gap: 16px;
+	margin-top: 16px;
 	clip-path: polygon(
         0 0, 
         calc(100% - 24px) 0,
@@ -1915,7 +1919,7 @@ align-items: center;
 
 .accordion-item{
 	position: absolute;
-	top: 36px;
+	top: 28px;
 	left: 16px;
 }
 
@@ -1952,11 +1956,11 @@ align-items: center;
 
 @media (max-width: 1439px) {
 	.accordion-label{
-		padding: 32px 80px 24px 56px;
+		padding: 24px 80px 24px 56px;
 		margin-top: 16px;
 	}
 	.accordion-label::after {
-		top: 40px;
+		top: 34px;
 	}
 }
 

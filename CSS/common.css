@@ -125,7 +125,15 @@
     display: inline-block;
     color: #042190;
     text-align: center;
-    margin-bottom: 16px;
+}
+
+.subtitle-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 32px;
+	align-items: center;
+	margin-bottom: 16px;
 }
 
 .TitleContent{
@@ -254,6 +262,11 @@
         height: 24px;
     }
 
+    .subtitle-container{
+        gap: 16px;
+        margin-bottom: 12px;
+    }
+
     .Title{
         margin-bottom: 24px;
     }
@@ -262,9 +275,6 @@
         top: 60px;
     }
     
-    .SubTitle{
-        margin-bottom: 8px;
-    }
 
   }
 
@@ -345,16 +355,16 @@
 .float-btn-desk{
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 16px;
 	position: fixed;
-	bottom: 40px;
+	bottom: 96px;
 	right: 32px;
     z-index: 100;
 }
 
 .edit-style,.submit-style{
-    width: 100px;
-    height: 100px;
+    width: 88px;
+    height: 88px;
     background-size:cover;
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
 }
@@ -385,10 +395,6 @@
     display: none;
 }
 
-.float-btn img{
-	width: 32px;
-	color: white;
-}
 
 .edit, .submit{
 	background-color: #0053AC;
@@ -398,7 +404,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 8px;
+	gap: 12px;
 	color: white;
 	font-size: 18px;
     border: 1px solid white;
@@ -599,14 +605,14 @@
     width: 48px;
     height: 48px;
     position: fixed;
-    bottom: 296px;
-    right: 60px;
+    bottom: 312px;
+    right: 52px;
     z-index: 1000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .float-ig:hover {
-    transform: scale(1.1); /* 放大效果 */
-    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3)); /* 使用 filter 的陰影效果 */
+    transform: scale(1.1); 
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3)); 
 }
 .tooltip {
     position: absolute;
@@ -626,12 +632,12 @@
 .tooltip::after {
     content: '';
     position: absolute;
-    top: 100%; /* 箭頭在工具提示的底部 */
+    top: 100%; 
     left: 50%;
     transform: translateX(-50%);
     border-width: 6px;
     border-style: solid;
-    border-color: #000000 transparent transparent transparent; /* 上方箭頭 */
+    border-color: #000000 transparent transparent transparent;
 }
 
 .float-ig:hover .tooltip {
@@ -881,11 +887,10 @@ body.no-scroll {
     display: none;
     position: fixed;
     z-index: 10000;
-    right: 160px;
-    bottom: 60px;
-    opacity: .7;
-    width: 56px;
-    height: 56px;
+    right: 52px;
+    bottom: 24px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
     background-image: url("../IMG/BG_Elemnet/goTop.svg");
     background-size: 100% auto;
@@ -895,7 +900,7 @@ body.no-scroll {
 
 .goTop:hover {
     transform: scale(1.1);
-    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3)); /* 增加陰影效果 */
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.3)); 
 }
 
 @media (max-width: 767px) {
@@ -908,20 +913,19 @@ body.no-scroll {
 
 
 .fade-in-up {
-    opacity: 0; /* 初始透明度 */
-    transform: translateY(20px); /* 初始位置：向下偏移 */
-    animation: fadeInUp 0.8s ease-out forwards; /* 動畫 */
+    opacity: 0; 
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* 動畫定義 */
 @keyframes fadeInUp {
     0% {
-        opacity: 0; /* 初始透明 */
-        transform: translateY(120px); /* 向下偏移 */
+        opacity: 0; 
+        transform: translateY(120px); 
     }
     100% {
-        opacity: 1; /* 最終不透明 */
-        transform: translateY(0); /* 回到原位置 */
+        opacity: 1; 
+        transform: translateY(0);
     }
 }
 .no-scroll {
