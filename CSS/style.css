@@ -1199,6 +1199,7 @@ img{
 
 
 .ma-life{
+	width: 100%;
 	display: flex;
 	margin-top: 56px;
 	background-color: white;
@@ -1207,14 +1208,33 @@ img{
 
 .ma-video{
 	padding: 24px;
-	height: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .ma-video:hover{
 	background-color: #F3F6FA;
 }
+
+
+.responsive-video {
+	position: relative;
+	width: 100%; /* 讓影片寬度適應父容器 */
+	max-width: 1120px; /* 設置最大寬度 */
+	padding-bottom: 56.25%; /* 高度比例：16:9 */
+	height: 0; /* 初始化高度 */
+	overflow: hidden;
+}
+
+.responsive-video iframe {
+	width: 100%;
+  	aspect-ratio: 16 / 9; /* 確保影片保持比例 */
+  }
+
+
 
 .day{
 	text-align: right;
@@ -1222,11 +1242,13 @@ img{
 }
 
 .video-title{
+	width: 100%;
 	margin-top: 12px;
 	color: black;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	flex-grow: 1;
 }
 
 .video-title h3{
@@ -1234,13 +1256,16 @@ img{
 }
 
 .video-title p{
+	font-size: 16px;
 	margin-top: 4px;
 	margin-bottom: 8px;
 }
 
-.video-pic{
-	width: 100%;
+.video-content p{
+	font-size: 18px;
+	font-weight: 500;
 }
+
 
 @media (min-width: 1439px) {
 
@@ -1274,13 +1299,19 @@ img{
 		gap: 12px;
 	}
 
-	.ma-life{
-		flex-direction: column;
+	.ma-video{
+		padding: 16px;
 	}
+
+	
 }
 
 @media (max-width: 767px) {
 	
+	.ma-life{
+		flex-direction: column;
+	}
+
 	.ShareMA{
 		padding: 24px 16px;
 	}
@@ -1748,6 +1779,28 @@ img{
 	flex-direction: column;
 	margin-left: 44px;
 }
+
+.map-link{
+	display: flex;
+	justify-content: center;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-link:hover {
+	transform: scale(1.1) translateY(-5px);
+  }
+
+.local-marker{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.local-marker p{
+	margin: 0;
+	display: inline;
+}
+
 .event-line{
 	width: 1px;            
     background-color: #B8BFCA;
